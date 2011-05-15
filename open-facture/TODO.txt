@@ -1,0 +1,11 @@
+Nom : 
+OpenBusiness
+OpenCompany
+MyOpenSI
+ZingaERP
+
+Module : 
+
+
+- create mysql db
+- 
