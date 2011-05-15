@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 15 mai 2011 17:25:37 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="FactureLine" table="facture_line" catalog="facture">
+        <id name="id" type="long">
+            <column name="ID" precision="15" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="facture" class="Facture" fetch="select">
+            <column name="FACTURE_ID" precision="15" scale="0" />
+        </many-to-one>
+        <many-to-one name="tvaType" class="TvaType" fetch="select">
+            <column name="TVA_ID" precision="15" scale="0" />
+        </many-to-one>
+        <many-to-one name="article" class="Article" fetch="select">
+            <column name="ARTICLE_ID" precision="15" scale="0" />
+        </many-to-one>
+        <property name="lineNumber" type="java.lang.Long">
+            <column name="LINE_NUMBER" precision="15" scale="0" />
+        </property>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" length="100" />
+        </property>
+        <property name="quantity" type="java.lang.Long">
+            <column name="QUANTITY" precision="15" scale="0" />
+        </property>
+        <property name="unitPriceHt" type="java.lang.Long">
+            <column name="UNIT_PRICE_HT" precision="15" scale="0" />
+        </property>
+        <property name="unitPriceTtc" type="java.lang.Long">
+            <column name="UNIT_PRICE_TTC" precision="15" scale="0" />
+        </property>
+        <property name="discountPct" type="java.lang.Long">
+            <column name="DISCOUNT_PCT" precision="15" scale="0" />
+        </property>
+        <property name="discountMntHt" type="java.lang.Long">
+            <column name="DISCOUNT_MNT_HT" precision="15" scale="0" />
+        </property>
+        <property name="discountMntTtc" type="java.lang.Long">
+            <column name="DISCOUNT_MNT_TTC" precision="15" scale="0" />
+        </property>
+        <property name="totAmountHt" type="java.lang.Long">
+            <column name="TOT_AMOUNT_HT" precision="15" scale="0" />
+        </property>
+        <property name="totAmountTtc" type="java.lang.Long">
+            <column name="TOT_AMOUNT_TTC" precision="15" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>
