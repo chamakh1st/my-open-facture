@@ -8,9 +8,9 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <groupId>com.mounir.openfacture</groupId>
-  <artifactId>dao</artifactId>
+  <artifactId>dao-api</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>dao</name>
+  <name>Dao api</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
