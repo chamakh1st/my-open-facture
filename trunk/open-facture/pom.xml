@@ -7,7 +7,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>open-facture</name>
+  <name>Open Facture</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -23,7 +23,10 @@
     </dependency>
   </dependencies>
   <modules>
-  	<module>dao</module>
+  	<module>entities</module>
+  	<module>dao-api</module>
+  	<module>dao-hibernate</module>
+  	<module>services</module>
   	<module>business</module>
   </modules>
 </project>
