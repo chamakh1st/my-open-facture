@@ -1,0 +1,20 @@
+company type : 
+	customer
+	provider
+	root_company
+
+legal form : 
+	SA 
+	SARL
+	EURL
+	SNC
+	SCP
+	EI
+	EIRL
+	Independant
+	Autres
+TVA
+	0
+	5,5
+	19,6
+
