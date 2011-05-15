@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 15 mai 2011 17:25:37 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="Company" table="company" catalog="facture">
+        <id name="id" type="long">
+            <column name="ID" precision="15" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="user" class="User" fetch="select">
+            <column name="USER_ID" precision="15" scale="0" />
+        </many-to-one>
+        <many-to-one name="company" class="Company" fetch="select">
+            <column name="ROOT_COMPANY_ID" precision="15" scale="0" />
+        </many-to-one>
+        <many-to-one name="companyType" class="CompanyType" fetch="select">
+            <column name="COMPANY_TYPE_ID" precision="15" scale="0" />
+        </many-to-one>
+        <many-to-one name="adress" class="Adress" fetch="select">
+            <column name="ADRESS_ID" precision="15" scale="0" />
+        </many-to-one>
+        <many-to-one name="legalForm" class="LegalForm" fetch="select">
+            <column name="LEGAL_FORM_ID" precision="15" scale="0" />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="NAME" length="30" />
+        </property>
+        <property name="siret" type="string">
+            <column name="SIRET" length="30" />
+        </property>
+        <property name="nafApe" type="string">
+            <column name="NAF_APE" length="30" />
+        </property>
+        <property name="tvaCode" type="java.lang.Long">
+            <column name="TVA_CODE" precision="15" scale="0" />
+        </property>
+        <property name="capital" type="java.lang.Long">
+            <column name="CAPITAL" precision="15" scale="0" />
+        </property>
+        <property name="url" type="string">
+            <column name="URL" length="30" />
+        </property>
+        <property name="tel" type="string">
+            <column name="TEL" length="30" />
+        </property>
+        <property name="fax" type="string">
+            <column name="FAX" length="30" />
+        </property>
+        <property name="mail" type="string">
+            <column name="MAIL" length="30" />
+        </property>
+        <property name="logo" type="binary">
+            <column name="LOGO" />
+        </property>
+        <set name="factures" table="facture" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="COMPANY_ID" precision="15" scale="0" />
+            </key>
+            <one-to-many class="Facture" />
+        </set>
+        <set name="companies" table="company" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ROOT_COMPANY_ID" precision="15" scale="0" />
+            </key>
+            <one-to-many class="Company" />
+        </set>
+        <set name="companies_1" table="company" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ROOT_COMPANY_ID" precision="15" scale="0" />
+            </key>
+            <one-to-many class="Company" />
+        </set>
+    </class>
+</hibernate-mapping>
