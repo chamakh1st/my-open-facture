@@ -9,7 +9,7 @@
 </head>
 <body>
 <f:view>
-	<h:outputLabel value="TTTTT" />
+	<h:outputLabel value="ADMIN WEBAPP" />
 </f:view>
 </body>
 </html>
