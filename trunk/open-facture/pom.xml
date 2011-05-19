@@ -28,6 +28,7 @@
   	<module>dao-hibernate</module>
   	<module>services</module>
   	<module>business</module>
+  	<module>web</module>
   	<module>web-admin</module>
   </modules>
 </project>
