@@ -1,6 +1,6 @@
 package com.mounir.openfacture.entities;
 
-// Generated 15 mai 2011 17:36:47 by Hibernate Tools 3.4.0.CR1
+// Generated 21 mai 2011 12:07:35 by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -13,7 +13,7 @@ public class Article implements java.io.Serializable {
 	private long id;
 	private ArticleType articleType;
 	private String name;
-	private Set factureLines = new HashSet(0);
+	private Set<FactureLine> factureLines = new HashSet<FactureLine>(0);
 
 	public Article() {
 	}
@@ -23,7 +23,7 @@ public class Article implements java.io.Serializable {
 	}
 
 	public Article(long id, ArticleType articleType, String name,
-			Set factureLines) {
+			Set<FactureLine> factureLines) {
 		this.id = id;
 		this.articleType = articleType;
 		this.name = name;
@@ -54,11 +54,11 @@ public class Article implements java.io.Serializable {
 		this.name = name;
 	}
 
-	public Set getFactureLines() {
+	public Set<FactureLine> getFactureLines() {
 		return this.factureLines;
 	}
 
-	public void setFactureLines(Set factureLines) {
+	public void setFactureLines(Set<FactureLine> factureLines) {
 		this.factureLines = factureLines;
 	}
 

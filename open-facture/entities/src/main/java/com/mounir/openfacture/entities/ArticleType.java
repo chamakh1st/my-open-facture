@@ -1,6 +1,6 @@
 package com.mounir.openfacture.entities;
 
-// Generated 15 mai 2011 17:36:47 by Hibernate Tools 3.4.0.CR1
+// Generated 21 mai 2011 12:07:35 by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -13,7 +13,7 @@ public class ArticleType implements java.io.Serializable {
 	private long id;
 	private String code;
 	private String description;
-	private Set articles = new HashSet(0);
+	private Set<Article> articles = new HashSet<Article>(0);
 
 	public ArticleType() {
 	}
@@ -22,7 +22,8 @@ public class ArticleType implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public ArticleType(long id, String code, String description, Set articles) {
+	public ArticleType(long id, String code, String description,
+			Set<Article> articles) {
 		this.id = id;
 		this.code = code;
 		this.description = description;
@@ -53,11 +54,11 @@ public class ArticleType implements java.io.Serializable {
 		this.description = description;
 	}
 
-	public Set getArticles() {
+	public Set<Article> getArticles() {
 		return this.articles;
 	}
 
-	public void setArticles(Set articles) {
+	public void setArticles(Set<Article> articles) {
 		this.articles = articles;
 	}
 

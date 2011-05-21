@@ -1,6 +1,6 @@
 package com.mounir.openfacture.entities;
 
-// Generated 15 mai 2011 17:36:47 by Hibernate Tools 3.4.0.CR1
+// Generated 21 mai 2011 12:07:35 by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -13,7 +13,7 @@ public class LegalForm implements java.io.Serializable {
 	private long id;
 	private String code;
 	private String description;
-	private Set companies = new HashSet(0);
+	private Set<Company> companies = new HashSet<Company>(0);
 
 	public LegalForm() {
 	}
@@ -22,7 +22,8 @@ public class LegalForm implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public LegalForm(long id, String code, String description, Set companies) {
+	public LegalForm(long id, String code, String description,
+			Set<Company> companies) {
 		this.id = id;
 		this.code = code;
 		this.description = description;
@@ -53,11 +54,11 @@ public class LegalForm implements java.io.Serializable {
 		this.description = description;
 	}
 
-	public Set getCompanies() {
+	public Set<Company> getCompanies() {
 		return this.companies;
 	}
 
-	public void setCompanies(Set companies) {
+	public void setCompanies(Set<Company> companies) {
 		this.companies = companies;
 	}
 
