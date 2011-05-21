@@ -1,6 +1,6 @@
 package com.mounir.openfacture.entities;
 
-// Generated 15 mai 2011 17:36:47 by Hibernate Tools 3.4.0.CR1
+// Generated 21 mai 2011 12:07:35 by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -26,9 +26,9 @@ public class Company implements java.io.Serializable {
 	private String fax;
 	private String mail;
 	private byte[] logo;
-	private Set factures = new HashSet(0);
-	private Set companies = new HashSet(0);
-	private Set companies_1 = new HashSet(0);
+	private Set<Facture> factures = new HashSet<Facture>(0);
+	private Set<Company> companies = new HashSet<Company>(0);
+	private Set<Company> companies_1 = new HashSet<Company>(0);
 
 	public Company() {
 	}
@@ -41,7 +41,8 @@ public class Company implements java.io.Serializable {
 			CompanyType companyType, Adress adress, LegalForm legalForm,
 			String name, String siret, String nafApe, Long tvaCode,
 			Long capital, String url, String tel, String fax, String mail,
-			byte[] logo, Set factures, Set companies, Set companies_1) {
+			byte[] logo, Set<Facture> factures, Set<Company> companies,
+			Set<Company> companies_1) {
 		this.id = id;
 		this.user = user;
 		this.company = company;
@@ -191,27 +192,27 @@ public class Company implements java.io.Serializable {
 		this.logo = logo;
 	}
 
-	public Set getFactures() {
+	public Set<Facture> getFactures() {
 		return this.factures;
 	}
 
-	public void setFactures(Set factures) {
+	public void setFactures(Set<Facture> factures) {
 		this.factures = factures;
 	}
 
-	public Set getCompanies() {
+	public Set<Company> getCompanies() {
 		return this.companies;
 	}
 
-	public void setCompanies(Set companies) {
+	public void setCompanies(Set<Company> companies) {
 		this.companies = companies;
 	}
 
-	public Set getCompanies_1() {
+	public Set<Company> getCompanies_1() {
 		return this.companies_1;
 	}
 
-	public void setCompanies_1(Set companies_1) {
+	public void setCompanies_1(Set<Company> companies_1) {
 		this.companies_1 = companies_1;
 	}
 

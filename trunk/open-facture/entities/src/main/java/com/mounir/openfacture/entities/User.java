@@ -1,6 +1,6 @@
 package com.mounir.openfacture.entities;
 
-// Generated 15 mai 2011 17:36:47 by Hibernate Tools 3.4.0.CR1
+// Generated 21 mai 2011 12:07:35 by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -18,7 +18,7 @@ public class User implements java.io.Serializable {
 	private String mail;
 	private String birthDate;
 	private String tel;
-	private Set companies = new HashSet(0);
+	private Set<Company> companies = new HashSet<Company>(0);
 
 	public User() {
 	}
@@ -29,7 +29,7 @@ public class User implements java.io.Serializable {
 
 	public User(long id, String login, String password, String firstName,
 			String lastName, String mail, String birthDate, String tel,
-			Set companies) {
+			Set<Company> companies) {
 		this.id = id;
 		this.login = login;
 		this.password = password;
@@ -105,11 +105,11 @@ public class User implements java.io.Serializable {
 		this.tel = tel;
 	}
 
-	public Set getCompanies() {
+	public Set<Company> getCompanies() {
 		return this.companies;
 	}
 
-	public void setCompanies(Set companies) {
+	public void setCompanies(Set<Company> companies) {
 		this.companies = companies;
 	}
 

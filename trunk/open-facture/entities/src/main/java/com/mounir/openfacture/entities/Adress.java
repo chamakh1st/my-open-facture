@@ -1,6 +1,6 @@
 package com.mounir.openfacture.entities;
 
-// Generated 15 mai 2011 17:36:47 by Hibernate Tools 3.4.0.CR1
+// Generated 21 mai 2011 12:07:35 by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -16,8 +16,8 @@ public class Adress implements java.io.Serializable {
 	private String adress2;
 	private String zipcode;
 	private String region;
-	private Set companies = new HashSet(0);
-	private Set bankAccounts = new HashSet(0);
+	private Set<Company> companies = new HashSet<Company>(0);
+	private Set<BankAccount> bankAccounts = new HashSet<BankAccount>(0);
 
 	public Adress() {
 	}
@@ -27,7 +27,8 @@ public class Adress implements java.io.Serializable {
 	}
 
 	public Adress(long id, Country country, String adress1, String adress2,
-			String zipcode, String region, Set companies, Set bankAccounts) {
+			String zipcode, String region, Set<Company> companies,
+			Set<BankAccount> bankAccounts) {
 		this.id = id;
 		this.country = country;
 		this.adress1 = adress1;
@@ -86,19 +87,19 @@ public class Adress implements java.io.Serializable {
 		this.region = region;
 	}
 
-	public Set getCompanies() {
+	public Set<Company> getCompanies() {
 		return this.companies;
 	}
 
-	public void setCompanies(Set companies) {
+	public void setCompanies(Set<Company> companies) {
 		this.companies = companies;
 	}
 
-	public Set getBankAccounts() {
+	public Set<BankAccount> getBankAccounts() {
 		return this.bankAccounts;
 	}
 
-	public void setBankAccounts(Set bankAccounts) {
+	public void setBankAccounts(Set<BankAccount> bankAccounts) {
 		this.bankAccounts = bankAccounts;
 	}
 

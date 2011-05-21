@@ -1,6 +1,6 @@
 package com.mounir.openfacture.entities;
 
-// Generated 15 mai 2011 17:36:47 by Hibernate Tools 3.4.0.CR1
+// Generated 21 mai 2011 12:07:35 by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -13,7 +13,7 @@ public class Currency implements java.io.Serializable {
 	private long id;
 	private String code;
 	private String description;
-	private Set factures = new HashSet(0);
+	private Set<Facture> factures = new HashSet<Facture>(0);
 
 	public Currency() {
 	}
@@ -22,7 +22,8 @@ public class Currency implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public Currency(long id, String code, String description, Set factures) {
+	public Currency(long id, String code, String description,
+			Set<Facture> factures) {
 		this.id = id;
 		this.code = code;
 		this.description = description;
@@ -53,11 +54,11 @@ public class Currency implements java.io.Serializable {
 		this.description = description;
 	}
 
-	public Set getFactures() {
+	public Set<Facture> getFactures() {
 		return this.factures;
 	}
 
-	public void setFactures(Set factures) {
+	public void setFactures(Set<Facture> factures) {
 		this.factures = factures;
 	}
 

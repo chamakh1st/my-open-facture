@@ -1,6 +1,6 @@
 package com.mounir.openfacture.entities;
 
-// Generated 15 mai 2011 17:36:47 by Hibernate Tools 3.4.0.CR1
+// Generated 21 mai 2011 12:07:35 by Hibernate Tools 3.4.0.CR1
 
 import java.math.BigDecimal;
 import java.util.HashSet;
@@ -14,7 +14,7 @@ public class TvaType implements java.io.Serializable {
 	private long id;
 	private String code;
 	private BigDecimal percentage;
-	private Set factureLines = new HashSet(0);
+	private Set<FactureLine> factureLines = new HashSet<FactureLine>(0);
 
 	public TvaType() {
 	}
@@ -23,7 +23,8 @@ public class TvaType implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public TvaType(long id, String code, BigDecimal percentage, Set factureLines) {
+	public TvaType(long id, String code, BigDecimal percentage,
+			Set<FactureLine> factureLines) {
 		this.id = id;
 		this.code = code;
 		this.percentage = percentage;
@@ -54,11 +55,11 @@ public class TvaType implements java.io.Serializable {
 		this.percentage = percentage;
 	}
 
-	public Set getFactureLines() {
+	public Set<FactureLine> getFactureLines() {
 		return this.factureLines;
 	}
 
-	public void setFactureLines(Set factureLines) {
+	public void setFactureLines(Set<FactureLine> factureLines) {
 		this.factureLines = factureLines;
 	}
 

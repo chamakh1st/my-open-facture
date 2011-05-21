@@ -1,6 +1,6 @@
 package com.mounir.openfacture.entities;
 
-// Generated 15 mai 2011 17:36:47 by Hibernate Tools 3.4.0.CR1
+// Generated 21 mai 2011 12:07:35 by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -13,7 +13,7 @@ public class Country implements java.io.Serializable {
 	private long id;
 	private String codeIso;
 	private String name;
-	private Set adresses = new HashSet(0);
+	private Set<Adress> adresses = new HashSet<Adress>(0);
 
 	public Country() {
 	}
@@ -22,7 +22,7 @@ public class Country implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public Country(long id, String codeIso, String name, Set adresses) {
+	public Country(long id, String codeIso, String name, Set<Adress> adresses) {
 		this.id = id;
 		this.codeIso = codeIso;
 		this.name = name;
@@ -53,11 +53,11 @@ public class Country implements java.io.Serializable {
 		this.name = name;
 	}
 
-	public Set getAdresses() {
+	public Set<Adress> getAdresses() {
 		return this.adresses;
 	}
 
-	public void setAdresses(Set adresses) {
+	public void setAdresses(Set<Adress> adresses) {
 		this.adresses = adresses;
 	}
 
