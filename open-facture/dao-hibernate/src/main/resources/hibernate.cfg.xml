@@ -9,6 +9,7 @@
 		<property name="hibernate.connection.username">mounir</property>
 		<property name="hibernate.connection.password">mounir</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<property name="hibernate.current_session_context_class">thread</property>
         <!-- MAPPING CLASS -->
 		<mapping resource="hbm/Adress.hbm.xml" />
 		<mapping resource="hbm/Article.hbm.xml" />
