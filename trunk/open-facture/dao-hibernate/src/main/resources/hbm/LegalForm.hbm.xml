@@ -2,11 +2,11 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 15 mai 2011 17:25:37 by Hibernate Tools 3.4.0.CR1 -->
-<hibernate-mapping>
-    <class name="LegalForm" table="legal_form" catalog="facture">
+<hibernate-mapping package="com.mounir.openfacture.entities">
+    <class name="LegalForm" table="legal_form" >
         <id name="id" type="long">
             <column name="ID" precision="15" scale="0" />
-            <generator class="assigned" />
+            <generator class="increment" />
         </id>
         <property name="code" type="string">
             <column name="CODE" length="30" />
