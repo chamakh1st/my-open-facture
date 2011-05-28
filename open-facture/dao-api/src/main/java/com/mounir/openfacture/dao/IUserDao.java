@@ -7,6 +7,6 @@ import com.mounir.openfacture.entities.User;
  * @author Mounir
  *
  */
-public interface IUserDao extends IBaseDAO<User, Long> {
+public interface IUserDao extends IBaseDao<User, Long> {
 
 }

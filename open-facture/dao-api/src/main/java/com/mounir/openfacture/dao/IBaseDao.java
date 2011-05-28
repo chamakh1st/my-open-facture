@@ -8,7 +8,7 @@ import java.util.List;
  * @author Mounir
  *
  */
-public interface IBaseDAO<T extends Serializable, PK extends Serializable> {
+public interface IBaseDao<T extends Serializable, PK extends Serializable> {
 
 	void create(T entity) ;
 	T get(PK id) ;
