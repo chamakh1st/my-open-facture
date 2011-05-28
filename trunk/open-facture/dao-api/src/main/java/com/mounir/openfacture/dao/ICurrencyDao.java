@@ -7,6 +7,6 @@ import com.mounir.openfacture.entities.Currency;
  * @author Mounir
  *
  */
-public interface ICurrencyDao extends IBaseDAO<Currency, Long> {
+public interface ICurrencyDao extends IBaseDao<Currency, Long> {
 
 }

@@ -7,6 +7,6 @@ import com.mounir.openfacture.entities.Adress;
  * @author Mounir
  *
  */
-public interface IAdressDao extends IBaseDAO<Adress, Long> {
+public interface IAdressDao extends IBaseDao<Adress, Long> {
 
 }

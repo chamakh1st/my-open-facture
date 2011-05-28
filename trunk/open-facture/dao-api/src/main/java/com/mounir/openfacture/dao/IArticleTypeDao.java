@@ -7,6 +7,6 @@ import com.mounir.openfacture.entities.ArticleType;
  * @author Mounir
  *
  */
-public interface IArticleTypeDao extends IBaseDAO<ArticleType, Long> {
+public interface IArticleTypeDao extends IBaseDao<ArticleType, Long> {
 
 }
