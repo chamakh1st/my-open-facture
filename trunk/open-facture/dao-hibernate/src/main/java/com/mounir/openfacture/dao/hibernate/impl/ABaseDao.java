@@ -6,7 +6,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.mounir.openfacture.dao.IBaseDAO;
+import com.mounir.openfacture.dao.IBaseDao;
 
 /**
  * 
@@ -14,7 +14,7 @@ import com.mounir.openfacture.dao.IBaseDAO;
  * 
  */
 public abstract class ABaseDao<T extends Serializable, PK extends Serializable>
-		implements IBaseDAO<T, PK> {
+		implements IBaseDao<T, PK> {
 
 	private static Logger log = LoggerFactory.getLogger(ABaseDao.class);
 
