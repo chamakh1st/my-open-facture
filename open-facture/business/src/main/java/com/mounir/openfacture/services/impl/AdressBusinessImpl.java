@@ -1,15 +1,15 @@
-package com.mounir.openfacture.services.impl;
+package com.mounir.openfacture.business.impl;
 
+import com.mounir.openfacture.business.IAdressBusiness;
 import com.mounir.openfacture.dao.IAdressDao;
 import com.mounir.openfacture.entities.Adress;
-import com.mounir.openfacture.services.IAdressService;
 
 /**
  * 
  * @author Mounir
  *
  */
-public class AdressServiceImpl extends ABaseService<Adress, Long> implements IAdressService{
+public class AdressBusinessImpl extends ABaseBusiness<Adress, Long> implements IAdressBusiness{
 	
 	
 	public IAdressDao getDao() {

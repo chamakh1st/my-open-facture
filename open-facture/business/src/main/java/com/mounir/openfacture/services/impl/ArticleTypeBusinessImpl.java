@@ -1,15 +1,15 @@
-package com.mounir.openfacture.services.impl;
+package com.mounir.openfacture.business.impl;
 
+import com.mounir.openfacture.business.IArticleTypeBusiness;
 import com.mounir.openfacture.dao.IArticleTypeDao;
 import com.mounir.openfacture.entities.ArticleType;
-import com.mounir.openfacture.services.IArticleTypeService;
 
 /**
  * 
  * @author Mounir
  *
  */
-public class ArticleTypeServiceImpl  extends ABaseService<ArticleType, Long> implements IArticleTypeService{
+public class ArticleTypeBusinessImpl  extends ABaseBusiness<ArticleType, Long> implements IArticleTypeBusiness{
 
 	public IArticleTypeDao getDao() {
 		return (IArticleTypeDao) dao;

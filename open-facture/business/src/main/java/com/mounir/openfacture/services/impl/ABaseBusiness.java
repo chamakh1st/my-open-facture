@@ -1,17 +1,17 @@
-package com.mounir.openfacture.services.impl;
+package com.mounir.openfacture.business.impl;
 
 import java.io.Serializable;
 import java.util.List;
 
+import com.mounir.openfacture.business.IBaseBusiness;
 import com.mounir.openfacture.dao.IBaseDao;
-import com.mounir.openfacture.services.IBaseService;
 
 /**
  * 
  * @author Mounir
  *
  */
-public abstract class ABaseService<E extends Serializable,PK extends Serializable> implements IBaseService<E, PK>{
+public abstract class ABaseBusiness<E extends Serializable,PK extends Serializable> implements IBaseBusiness<E, PK>{
 	
 	protected IBaseDao<E, PK> dao ;
 
