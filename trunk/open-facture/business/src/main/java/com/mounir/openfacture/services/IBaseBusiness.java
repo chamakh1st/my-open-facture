@@ -1,4 +1,4 @@
-package com.mounir.openfacture.services;
+package com.mounir.openfacture.business;
 
 import java.io.Serializable;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.List;
  * @author Mounir
  *
  */
-public interface IBaseService<T extends Serializable, PK extends Serializable> {
+public interface IBaseBusiness<T extends Serializable, PK extends Serializable> {
 
 	void create(T entity) ;
 	T get(PK id) ;
