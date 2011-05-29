@@ -1,15 +1,15 @@
-package com.mounir.openfacture.services.impl;
+package com.mounir.openfacture.business.impl;
 
+import com.mounir.openfacture.business.ICompanyBusiness;
 import com.mounir.openfacture.dao.ICompanyDao;
 import com.mounir.openfacture.entities.Company;
-import com.mounir.openfacture.services.ICompanyService;
 
 /**
  * 
  * @author Mounir
  *
  */
-public class CompanyServiceImpl  extends ABaseService<Company, Long> implements ICompanyService{
+public class CompanyBusinessImpl  extends ABaseBusiness<Company, Long> implements ICompanyBusiness{
 
 	public ICompanyDao getDao() {
 		return (ICompanyDao) dao;

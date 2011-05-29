@@ -1,16 +1,16 @@
-package com.mounir.openfacture.services.impl;
+package com.mounir.openfacture.business.impl;
 
+import com.mounir.openfacture.business.ILegalFormBusiness;
 import com.mounir.openfacture.dao.ILegalFormDao;
 import com.mounir.openfacture.entities.LegalForm;
-import com.mounir.openfacture.services.ILegalFormService;
 
 /**
  * 
  * @author Mounir
  * 
  */
-public class LegalFormServiceImpl extends ABaseService<LegalForm, Long>
-		implements ILegalFormService {
+public class LegalFormBusinessImpl extends ABaseBusiness<LegalForm, Long>
+		implements ILegalFormBusiness{
 	
 	
 	public ILegalFormDao getDao() {

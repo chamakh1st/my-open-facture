@@ -1,16 +1,16 @@
-package com.mounir.openfacture.services.impl;
+package com.mounir.openfacture.business.impl;
 
+import com.mounir.openfacture.business.IUserBusiness;
 import com.mounir.openfacture.dao.IUserDao;
 import com.mounir.openfacture.entities.User;
-import com.mounir.openfacture.services.IUserService;
 
 /**
  * 
  * @author Mounir
  * 
  */
-public class UserServiceImpl extends ABaseService<User, Long> implements
-		IUserService {
+public class UserBusinessImpl extends ABaseBusiness<User, Long> implements
+		IUserBusiness{
 	
 	public IUserDao getDao() {
 		return (IUserDao) dao;
