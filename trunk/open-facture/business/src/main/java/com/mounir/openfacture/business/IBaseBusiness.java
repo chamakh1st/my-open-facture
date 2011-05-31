@@ -3,16 +3,22 @@ package com.mounir.openfacture.business;
 import java.io.Serializable;
 import java.util.List;
 
+import com.mounir.openfacture.dao.IBaseDao;
+
 /**
  * 
  * @author Mounir
  *
  */
-public interface IBaseBusiness<T extends Serializable, PK extends Serializable> {
+public interface IBaseBusiness<E extends Serializable, PK extends Serializable> {
 
-	void create(T entity) ;
-	T get(PK id) ;
-	void update(T entity) ;
+	
+	IBaseDao<E, PK> getDao() ;
+	void setDao(IBaseDao<E, PK> dao) ;
+
+	void create(E entity) ;
+	E get(PK id) ;
+	void update(E entity) ;
 	void delete(PK id) ;
-	List<T> list() ;
+	List<E> list() ;
 }
