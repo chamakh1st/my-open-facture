@@ -2,6 +2,20 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-
+	<!-- DAO -->
+	<bean name="adressDao" class="com.mounir.openfacture.dao.hibernate.impl.AdressDaoImpl" />
+	<bean name="articleDao" class="com.mounir.openfacture.dao.hibernate.impl.ArticleDaoImpl" />
+	<bean name="articleTypeDao" class="com.mounir.openfacture.dao.hibernate.impl.ArticleTypeDaoImpl" />
+	<bean name="bankAccountDao" class="com.mounir.openfacture.dao.hibernate.impl.BankAccountDaoImpl" />
+	<bean name="companyDao" class="com.mounir.openfacture.dao.hibernate.impl.CompanyDaoImp" />
+	<bean name="companyTypeDao" class="com.mounir.openfacture.dao.hibernate.impl.CompanyTypeDaoImp" />
+	<bean name="countryDao" class="com.mounir.openfacture.dao.hibernate.impl.CountryDaoImpl" />
+	<bean name="currencyDao" class="com.mounir.openfacture.dao.hibernate.impl.CurrencyDaoImpl" />
+	<bean name="factureDao" class="com.mounir.openfacture.dao.hibernate.impl.FactureDaoImpl" />
+	<bean name="factureLineDao" class="com.mounir.openfacture.dao.hibernate.impl.FactureLineDaoImpl" />
+	<bean name="legalFormDao" class="com.mounir.openfacture.dao.hibernate.impl.LegalFormDaoImpl" />
+	<bean name="tvaTypeDao" class="com.mounir.openfacture.dao.hibernate.impl.TvaTypeDaoImpl" />
+	<bean name="userDao" class="com.mounir.openfacture.dao.hibernate.impl.UserDaoImpl" />
+	<!-- Business -->
+	
 </beans>
