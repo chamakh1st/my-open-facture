@@ -17,5 +17,43 @@
 	<bean name="tvaTypeDao" class="com.mounir.openfacture.dao.hibernate.impl.TvaTypeDaoImpl" />
 	<bean name="userDao" class="com.mounir.openfacture.dao.hibernate.impl.UserDaoImpl" />
 	<!-- Business -->
-	
+	<bean name="adressBusiness" class="com.mounir.openfacture.business.impl.AdressBusinessImpl">
+		<property name="dao" ref="adressDao"/>
+	</bean>
+	<bean name="articleBusiness" class="com.mounir.openfacture.business.impl.ArticleBusinessImpl">
+		<property name="dao" ref="articleDao"/>
+	</bean>
+	<bean name="articleTypeBusiness" class="com.mounir.openfacture.business.impl.ArticleTypeBusinessImpl">
+		<property name="dao" ref="articleTypeDao"/>
+	</bean>
+	<bean name="bankAccountBusiness" class="com.mounir.openfacture.business.impl.BankAccountBusinessImpl">
+		<property name="dao" ref="bankAccountDao"/>
+	</bean>
+	<bean name="companyBusiness" class="com.mounir.openfacture.business.impl.CompanyBusinessImpl">
+		<property name="dao" ref="companyDao"/>
+	</bean>
+	<bean name="companyTypeBusiness" class="com.mounir.openfacture.business.impl.CompanyTypeBusinessImpl">
+		<property name="dao" ref="companyTypeDao"/>
+	</bean>
+	<bean name="countryBusiness" class="com.mounir.openfacture.business.impl.CountryBusinessImpl">
+		<property name="dao" ref="countryDao"/>
+	</bean>
+	<bean name="currencyBusiness" class="com.mounir.openfacture.business.impl.CurrencyBusinessImpl">
+		<property name="dao" ref="currencyDao"/>
+	</bean>
+	<bean name="factureBusiness" class="com.mounir.openfacture.business.impl.FactureBusinessImpl">
+		<property name="dao" ref="factureDao"/>
+	</bean>
+	<bean name="factureLineBusiness" class="com.mounir.openfacture.business.impl.FactureLineBusinessImpl">
+		<property name="dao" ref="factureLineDao"/>
+	</bean>
+	<bean name="legalFormBusiness" class="com.mounir.openfacture.business.impl.LegalFormBusinessImpl">
+		<property name="dao" ref="legalFormDao"/>
+	</bean>
+	<bean name="tvaTypeBusiness" class="com.mounir.openfacture.business.impl.TvaTypeBusinessImpl">
+		<property name="dao" ref="tvaTypeDao"/>
+	</bean>
+	<bean name="userBusiness" class="com.mounir.openfacture.business.impl.UserBusinessImpl">
+		<property name="dao" ref="userDao"/>
+	</bean>
 </beans>
