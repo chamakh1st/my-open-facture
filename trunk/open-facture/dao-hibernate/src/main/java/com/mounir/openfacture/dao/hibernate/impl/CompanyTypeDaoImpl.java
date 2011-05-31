@@ -8,6 +8,6 @@ import com.mounir.openfacture.entities.CompanyType;
  * @author Mounir
  *
  */
-public class CompanyTypeDaoImp extends ABaseDao<CompanyType, Long>  implements ICompanyTypeDao{
+public class CompanyTypeDaoImpl extends ABaseDao<CompanyType, Long>  implements ICompanyTypeDao{
 
 }
