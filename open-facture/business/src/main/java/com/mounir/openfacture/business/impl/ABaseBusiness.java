@@ -15,6 +15,11 @@ public abstract class ABaseBusiness<E extends Serializable,PK extends Serializab
 	
 	protected IBaseDao<E, PK> dao ;
 
+
+	public void setDao(IBaseDao<E, PK> dao) {
+		this.dao = dao ;
+	}
+	
 	public void create(E entity) {
 		// TODO Auto-generated method stub
 		
