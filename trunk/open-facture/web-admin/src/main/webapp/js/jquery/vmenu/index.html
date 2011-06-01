@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Vertical submenu</title>
+		<link rel="stylesheet" href="vmenu.css" />
+		<script src="jquery.js"></script>
+		<script src="vmenu.js"></script>
+		<script language="JavaScript">
+        $(document).ready(function(){
+			$('#vmenu').vmenu();
+        });
+        </script>
+        
+	</head>
+	<body>
+		<h1>vMenu</h1>
+		<p>Vertical submenu</p>
+		
+		<div id="sidebar">
+			
+		<ul id="vmenu">
+			<li><a href="#">Category 1</a>
+				<ul>
+					<li><a href="#">Subitem 1</a></li>
+					<li><a href="#">Subitem 2</a></li>
+					<li><a href="#">Subitem 3</a>
+						<ul>
+							<li><a href="#">Subitem 3-1</a></li>
+							<li><a href="#">Subitem 3-2</a></li>
+							<li><a href="#" class="active">Subitem 3-3</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Subitem 4</a></li>
+					<li><a href="#">Subitem 5</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Category 2</a>
+				<ul>
+					<li><a href="#">Subitem 1</a></li>
+					<li><a href="#">Subitem 2</a></li>
+				</ul>
+			</li>
+		</ul>
+		
+		</div><!--/sidebar-->
+		
+		<div id="body">
+			Please choose category
+		</div>
+		<!-- Overriding forward function -->
+		<script language="JavaScript">
+			$(document).ready(function(){
+				vMenu.forward=function(elem) {
+					$('#body').html(elem.html()+' was selected');
+					return false;
+				}
+			});
+		</script>
+		
+		<div class="clear"></div>
+		<h2>MarkUp:</h2>
+		<pre>
+&lt;ul id="vmenu"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Category 1&lt;/a&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Subitem 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Subitem 2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Subitem 3&lt;/a&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Subitem 3-1&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Subitem 3-2&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#" class="active"&gt;Subitem 3-3&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Category 2&lt;/a&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Subitem 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Subitem 2&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+		</pre>
+		
+		<h2>Usage:</h2>
+		<pre>
+$(document).ready(function(){
+	$('#vmenu').vmenu();
+});			
+		</pre>
+		
+		<h2>You can use it for AJAX requests:</h2>
+		<pre>
+$(document).ready(function(){
+	vMenu.forward=function(elem) {
+		// your action here
+		return false;
+	}
+});
+		</pre>
+	</body>
+</html>
