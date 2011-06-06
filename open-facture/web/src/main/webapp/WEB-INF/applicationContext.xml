@@ -7,12 +7,13 @@
 	<bean name="articleDao" class="com.mounir.openfacture.dao.hibernate.impl.ArticleDaoImpl" />
 	<bean name="articleTypeDao" class="com.mounir.openfacture.dao.hibernate.impl.ArticleTypeDaoImpl" />
 	<bean name="bankAccountDao" class="com.mounir.openfacture.dao.hibernate.impl.BankAccountDaoImpl" />
-	<bean name="companyDao" class="com.mounir.openfacture.dao.hibernate.impl.CompanyDaoImp" />
-	<bean name="companyTypeDao" class="com.mounir.openfacture.dao.hibernate.impl.CompanyTypeDaoImp" />
+	<bean name="companyDao" class="com.mounir.openfacture.dao.hibernate.impl.CompanyDaoImpl" />
+	<bean name="companyTypeDao" class="com.mounir.openfacture.dao.hibernate.impl.CompanyTypeDaoImpl" />
 	<bean name="countryDao" class="com.mounir.openfacture.dao.hibernate.impl.CountryDaoImpl" />
 	<bean name="currencyDao" class="com.mounir.openfacture.dao.hibernate.impl.CurrencyDaoImpl" />
-	<bean name="factureDao" class="com.mounir.openfacture.dao.hibernate.impl.FactureDaoImpl" />
-	<bean name="factureLineDao" class="com.mounir.openfacture.dao.hibernate.impl.FactureLineDaoImpl" />
+	<bean name="documentDao" class="com.mounir.openfacture.dao.hibernate.impl.DocumentDaoImpl" />
+	<bean name="documentLineDao" class="com.mounir.openfacture.dao.hibernate.impl.DocumentLineDaoImpl" />
+	<bean name="documentTypeDao" class="com.mounir.openfacture.dao.hibernate.impl.DocumentTypeDaoImpl" />
 	<bean name="legalFormDao" class="com.mounir.openfacture.dao.hibernate.impl.LegalFormDaoImpl" />
 	<bean name="tvaTypeDao" class="com.mounir.openfacture.dao.hibernate.impl.TvaTypeDaoImpl" />
 	<bean name="userDao" class="com.mounir.openfacture.dao.hibernate.impl.UserDaoImpl" />
@@ -41,11 +42,14 @@
 	<bean name="currencyBusiness" class="com.mounir.openfacture.business.impl.CurrencyBusinessImpl">
 		<property name="dao" ref="currencyDao"/>
 	</bean>
-	<bean name="factureBusiness" class="com.mounir.openfacture.business.impl.FactureBusinessImpl">
-		<property name="dao" ref="factureDao"/>
+	<bean name="documentBusiness" class="com.mounir.openfacture.business.impl.DocumentBusinessImpl">
+		<property name="dao" ref="documentDao"/>
 	</bean>
-	<bean name="factureLineBusiness" class="com.mounir.openfacture.business.impl.FactureLineBusinessImpl">
-		<property name="dao" ref="factureLineDao"/>
+	<bean name="documentLineBusiness" class="com.mounir.openfacture.business.impl.DocumentLineBusinessImpl">
+		<property name="dao" ref="documentLineDao"/>
+	</bean>
+	<bean name="documentTypeBusiness" class="com.mounir.openfacture.business.impl.DocumentTypeBusinessImpl">
+		<property name="dao" ref="documentLineDao"/>
 	</bean>
 	<bean name="legalFormBusiness" class="com.mounir.openfacture.business.impl.LegalFormBusinessImpl">
 		<property name="dao" ref="legalFormDao"/>
