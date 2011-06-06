@@ -5,6 +5,7 @@
 <Workspace>
 	<Local Expanded="Yes">
 		<Model Expanded="Yes" ID="{448C3E3C-CB9A-4ABC-AAA2-8017BAA34D1F}" Loaded="No" Name="my-open-facture" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="my-open-facture.pdm"/>
+		<Model Expanded="Yes" ID="{448C3E3C-CB9A-4ABC-AAA2-8017BAA34D1F}" Loaded="No" Name="my-open-facture" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="my-open-facture.pdm"/>
 		<Model Expanded="Yes" ID="{448C3E3C-CB9A-4ABC-AAA2-8017BAA34D1F}" Name="my-open-facture" Selected="Yes" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="my-open-facture.pdm"/>
 	</Local>
 	<BrowserModule Name="Repository"/>

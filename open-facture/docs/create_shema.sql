@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     15/05/2011 16:38:19                          */
+/* Created on:     03/06/2011 00:23:59                          */
 /*==============================================================*/
 
 
@@ -20,9 +20,11 @@ drop table if exists COUNTRY;
 
 drop table if exists CURRENCY;
 
-drop table if exists FACTURE;
+drop table if exists DOCUMENT;
 
-drop table if exists FACTURE_LINE;
+drop table if exists DOCUMENT_LINE;
+
+drop table if exists DOCUMENT_TYPE;
 
 drop table if exists LEGAL_FORM;
 
@@ -36,8 +38,8 @@ drop table if exists USER;
 create table ADRESS
 (
    ID                   numeric(15) not null,
-   ADRESS1              varchar(30),
-   ADRESS2              varchar(30),
+   ADRESS1              varchar(255),
+   ADRESS2              varchar(255),
    ZIPCODE              varchar(30),
    REGION               varchar(30),
    COUNTRY_ID           numeric(15),
@@ -62,7 +64,7 @@ create table ARTICLE_TYPE
 (
    ID                   numeric(15) not null,
    CODE                 varchar(30),
-   DESCRIPTION          varchar(30),
+   DESCRIPTION          varchar(255),
    primary key (ID)
 );
 
@@ -114,7 +116,7 @@ create table COMPANY_TYPE
 (
    ID                   numeric(15) not null,
    CODE                 varchar(30),
-   DESCRIPTION          varchar(30),
+   DESCRIPTION          varchar(255),
    primary key (ID)
 );
 
@@ -125,7 +127,7 @@ create table COUNTRY
 (
    ID                   numeric(15) not null,
    CODE_ISO             varchar(30),
-   NAME                 varchar(30),
+   NAME                 varchar(255),
    primary key (ID)
 );
 
@@ -136,25 +138,26 @@ create table CURRENCY
 (
    ID                   numeric(15) not null,
    CODE                 varchar(30),
-   DESCRIPTION          varchar(30),
+   DESCRIPTION          varchar(255),
    primary key (ID)
 );
 
 /*==============================================================*/
-/* Table: FACTURE                                               */
+/* Table: DOCUMENT                                              */
 /*==============================================================*/
-create table FACTURE
+create table DOCUMENT
 (
    ID                   numeric(15) not null,
    COMPANY_ID           numeric(15),
    CURRENCY_ID          numeric(15),
+   DOCUMENT_TYPE_ID     numeric(15),
    primary key (ID)
 );
 
 /*==============================================================*/
-/* Table: FACTURE_LINE                                          */
+/* Table: DOCUMENT_LINE                                         */
 /*==============================================================*/
-create table FACTURE_LINE
+create table DOCUMENT_LINE
 (
    ID                   numeric(15) not null,
    LINE_NUMBER          numeric(15),
@@ -174,13 +177,24 @@ create table FACTURE_LINE
 );
 
 /*==============================================================*/
+/* Table: DOCUMENT_TYPE                                         */
+/*==============================================================*/
+create table DOCUMENT_TYPE
+(
+   ID                   numeric(15) not null,
+   CODE                 varchar(30),
+   DESCRIPTION          varchar(255),
+   primary key (ID)
+);
+
+/*==============================================================*/
 /* Table: LEGAL_FORM                                            */
 /*==============================================================*/
 create table LEGAL_FORM
 (
    ID                   numeric(15) not null,
    CODE                 varchar(30),
-   DESCRIPTION          varchar(30),
+   DESCRIPTION          varchar(255),
    primary key (ID)
 );
 
@@ -238,18 +252,21 @@ alter table COMPANY add constraint FK_COMPANY_USER foreign key (USER_ID)
 alter table COMPANY add constraint FK_CUSTOMER_COMPANY foreign key (ROOT_COMPANY_ID)
       references COMPANY (ID) on delete restrict on update restrict;
 
-alter table FACTURE add constraint FK_FACTURE_COMPANY foreign key (COMPANY_ID)
+alter table DOCUMENT add constraint FK_FACTURE_COMPANY foreign key (COMPANY_ID)
       references COMPANY (ID) on delete restrict on update restrict;
 
-alter table FACTURE add constraint FK_FACTURE_CURRENCY foreign key (CURRENCY_ID)
+alter table DOCUMENT add constraint FK_FACTURE_CURRENCY foreign key (CURRENCY_ID)
       references CURRENCY (ID) on delete restrict on update restrict;
 
-alter table FACTURE_LINE add constraint FK_FACTURE_LINE foreign key (FACTURE_ID)
-      references FACTURE (ID) on delete restrict on update restrict;
+alter table DOCUMENT add constraint FK_REFERENCE_15 foreign key (DOCUMENT_TYPE_ID)
+      references DOCUMENT_TYPE (ID) on delete restrict on update restrict;
 
-alter table FACTURE_LINE add constraint FK_FACTURE_LINE_ARTICLE foreign key (ARTICLE_ID)
+alter table DOCUMENT_LINE add constraint FK_FACTURE_LINE foreign key (FACTURE_ID)
+      references DOCUMENT (ID) on delete restrict on update restrict;
+
+alter table DOCUMENT_LINE add constraint FK_FACTURE_LINE_ARTICLE foreign key (ARTICLE_ID)
       references ARTICLE (ID) on delete restrict on update restrict;
 
-alter table FACTURE_LINE add constraint FK_FACTURE_LINE_TYPE_TVA foreign key (TVA_ID)
+alter table DOCUMENT_LINE add constraint FK_FACTURE_LINE_TYPE_TVA foreign key (TVA_ID)
       references TVA_TYPE (ID) on delete restrict on update restrict;
 
