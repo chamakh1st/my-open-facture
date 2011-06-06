@@ -1,7 +1,5 @@
 package com.mounir.openfacture.dao.hibernate.impl;
 
-import java.lang.reflect.ParameterizedType;
-
 import com.mounir.openfacture.dao.IAdressDao;
 import com.mounir.openfacture.entities.Adress;
 
