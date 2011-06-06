@@ -1,6 +1,6 @@
 package com.mounir.openfacture.entities;
 
-// Generated 21 mai 2011 12:07:35 by Hibernate Tools 3.4.0.CR1
+// Generated 3 juin 2011 00:46:45 by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;

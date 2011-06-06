@@ -1,6 +1,6 @@
 package com.mounir.openfacture.entities;
 
-// Generated 21 mai 2011 12:07:35 by Hibernate Tools 3.4.0.CR1
+// Generated 3 juin 2011 00:46:45 by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -26,7 +26,7 @@ public class Company implements java.io.Serializable {
 	private String fax;
 	private String mail;
 	private byte[] logo;
-	private Set<Facture> factures = new HashSet<Facture>(0);
+	private Set<Document> documents = new HashSet<Document>(0);
 	private Set<Company> companies = new HashSet<Company>(0);
 	private Set<Company> companies_1 = new HashSet<Company>(0);
 
@@ -41,7 +41,7 @@ public class Company implements java.io.Serializable {
 			CompanyType companyType, Adress adress, LegalForm legalForm,
 			String name, String siret, String nafApe, Long tvaCode,
 			Long capital, String url, String tel, String fax, String mail,
-			byte[] logo, Set<Facture> factures, Set<Company> companies,
+			byte[] logo, Set<Document> documents, Set<Company> companies,
 			Set<Company> companies_1) {
 		this.id = id;
 		this.user = user;
@@ -59,7 +59,7 @@ public class Company implements java.io.Serializable {
 		this.fax = fax;
 		this.mail = mail;
 		this.logo = logo;
-		this.factures = factures;
+		this.documents = documents;
 		this.companies = companies;
 		this.companies_1 = companies_1;
 	}
@@ -192,12 +192,12 @@ public class Company implements java.io.Serializable {
 		this.logo = logo;
 	}
 
-	public Set<Facture> getFactures() {
-		return this.factures;
+	public Set<Document> getDocuments() {
+		return this.documents;
 	}
 
-	public void setFactures(Set<Facture> factures) {
-		this.factures = factures;
+	public void setDocuments(Set<Document> documents) {
+		this.documents = documents;
 	}
 
 	public Set<Company> getCompanies() {
