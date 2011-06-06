@@ -1,12 +1,15 @@
 package com.mounir.openfacture.dao.hibernate.impl;
 
 import java.io.Serializable;
+import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
+import org.hibernate.Session;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.mounir.openfacture.dao.IBaseDao;
+import com.mounir.openfacture.dao.hibernate.util.HibernateUtils;
 
 /**
  * 
@@ -20,11 +23,15 @@ public abstract class ABaseDao<T extends Serializable, PK extends Serializable>
 
 	public void create(T entity) {
 		log.info("create(T entity)");
+		getSession().save(entity)  ;
 	}
 
 	public T get(PK id) {
 		log.info("T get(PK id)");
-		return null;
+		Session session = getSession();
+		session.beginTransaction() ;
+//		return null ;
+		return (T)session.get(getEntityClass(), id);
 	}
 
 	public void update(T entity) {
@@ -38,5 +45,13 @@ public abstract class ABaseDao<T extends Serializable, PK extends Serializable>
 	public List<T> list() {
 		log.info("list()");
 		return null;
+	}
+	
+	@SuppressWarnings("unchecked")
+	protected Class<T> getEntityClass(){
+		return (Class<T>)((ParameterizedType)this.getClass().getGenericSuperclass()).getActualTypeArguments()[0] ;
+	}
+	protected Session getSession(){
+		return HibernateUtils.get().getSession() ;
 	}
 }
