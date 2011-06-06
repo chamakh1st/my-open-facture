@@ -2,17 +2,5 @@
 <!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
 
 <hibernate-reverse-engineering>
-  <table-filter match-catalog="facture" match-name="adress"/>
-  <table-filter match-catalog="facture" match-name="article"/>
-  <table-filter match-catalog="facture" match-name="article_type"/>
-  <table-filter match-catalog="facture" match-name="bank_account"/>
-  <table-filter match-catalog="facture" match-name="company"/>
-  <table-filter match-catalog="facture" match-name="company_type"/>
-  <table-filter match-catalog="facture" match-name="country"/>
-  <table-filter match-catalog="facture" match-name="currency"/>
-  <table-filter match-catalog="facture" match-name="facture"/>
-  <table-filter match-catalog="facture" match-name="facture_line"/>
-  <table-filter match-catalog="facture" match-name="legal_form"/>
-  <table-filter match-catalog="facture" match-name="tva_type"/>
-  <table-filter match-catalog="facture" match-name="user"/>
+  <table-filter match-name=".*"/>
 </hibernate-reverse-engineering>
