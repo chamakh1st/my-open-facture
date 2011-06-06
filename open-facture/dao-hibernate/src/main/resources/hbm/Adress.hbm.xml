@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 15 mai 2011 17:25:37 by Hibernate Tools 3.4.0.CR1 -->
-<hibernate-mapping package="com.mounir.openfacture.entities">
-    <class name="Adress" table="adress" >
+<!-- Generated 3 juin 2011 00:40:58 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="Adress" table="adress" catalog="facture">
         <id name="id" type="long">
             <column name="ID" precision="15" scale="0" />
-            <generator class="increment" />
+            <generator class="assigned" />
         </id>
         <many-to-one name="country" class="Country" fetch="select">
             <column name="COUNTRY_ID" precision="15" scale="0" />
         </many-to-one>
         <property name="adress1" type="string">
-            <column name="ADRESS1" length="30" />
+            <column name="ADRESS1" />
         </property>
         <property name="adress2" type="string">
-            <column name="ADRESS2" length="30" />
+            <column name="ADRESS2" />
         </property>
         <property name="zipcode" type="string">
             <column name="ZIPCODE" length="30" />

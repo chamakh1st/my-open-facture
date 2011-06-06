@@ -19,8 +19,9 @@
 		<mapping resource="hbm/CompanyType.hbm.xml" />
 		<mapping resource="hbm/Country.hbm.xml" />
 		<mapping resource="hbm/Currency.hbm.xml" />
-		<mapping resource="hbm/Facture.hbm.xml" />
-		<mapping resource="hbm/FactureLine.hbm.xml" />
+		<mapping resource="hbm/Document.hbm.xml" />
+		<mapping resource="hbm/DocumentLine.hbm.xml" />
+		<mapping resource="hbm/DocumentType.hbm.xml" />
 		<mapping resource="hbm/LegalForm.hbm.xml" />
 		<mapping resource="hbm/TvaType.hbm.xml" />
 		<mapping resource="hbm/User.hbm.xml" />
