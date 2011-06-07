@@ -6,7 +6,7 @@
     <class name="DocumentType" table="document_type" catalog="facture">
         <id name="id" type="long">
             <column name="ID" precision="15" scale="0" />
-            <generator class="assigned" />
+            <generator class="increment" />
         </id>
         <property name="code" type="string">
             <column name="CODE" length="30" />
