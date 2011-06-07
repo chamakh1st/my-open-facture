@@ -4,7 +4,7 @@ import org.junit.Before;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.mounir.openfacture.dao.IArticleTypeDao;
+import com.mounir.openfacture.dao.IDocumentLineDao;
 
 
 /**
@@ -12,12 +12,12 @@ import com.mounir.openfacture.dao.IArticleTypeDao;
  * @author Mounir
  *
  */
-public class ArticleTypeDaoImplTest extends ABaseDaoTest<IArticleTypeDao>{
+public class DocumentLineDaoImplTest extends ABaseDaoTest<IDocumentLineDao>{
 
 	private static Logger log = LoggerFactory.getLogger(ABaseDaoTest.class);
 	
 	@Before
 	public void beforeMethode(){
-		super.dao = new ArticleTypeDaoImpl() ;
+		super.dao = new DocumentLineDaoImpl() ;
 	}
 }
