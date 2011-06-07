@@ -38,9 +38,9 @@ public abstract class ABaseDao<T extends Serializable, PK extends Serializable>
 		getSession().update(entity) ;
 	}
 
-	public void delete(PK id) {
-		log.info("delete(PK id)");
-//		getSession().delete(arg0)
+	public void delete(T entity) {
+		log.info("delete(T entity)");
+		getSession().delete(entity) ;
 	}
 
 	public List<T> list() {
