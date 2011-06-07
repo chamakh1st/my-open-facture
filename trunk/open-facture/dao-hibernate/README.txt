@@ -6,4 +6,4 @@ Goal to generate hibernate file(hbm & java) :
     - hibernate3:hbm2hbmxml: Generates a set of hbm.xml files
     - hibernate3:hbm2java: Generates Java classes from set of *.hbm.xml files
     - hibernate3:hbmtemplate: Renders arbitrary templates against Hibernate Mapping information.
-	- hibernate3:hbm2dao 	: Base class for the different hibernate3 goals based on the Ant tasks of hibernate tools.
+	- hibernate3:hbm2dao : Base class for the different hibernate3 goals based on the Ant tasks of hibernate tools.
