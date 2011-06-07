@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 7 juin 2011 14:49:01 by Hibernate Tools 3.2.2.GA -->
+<hibernate-mapping package="com.mounir.openfacture.entities">
+    <class name="Document" table="document" catalog="facture">
+        <id name="id" type="long">
+            <column name="ID" precision="15" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="documentType" class="DocumentType" fetch="select">
+            <column name="DOCUMENT_TYPE_ID" precision="15" scale="0" />
+        </many-to-one>
+        <many-to-one name="currency" class="Currency" fetch="select">
+            <column name="CURRENCY_ID" precision="15" scale="0" />
+        </many-to-one>
+        <many-to-one name="company" class="Company" fetch="select">
+            <column name="COMPANY_ID" precision="15" scale="0" />
+        </many-to-one>
+        <set name="documentLines" inverse="true">
+            <key>
+                <column name="FACTURE_ID" precision="15" scale="0" />
+            </key>
+            <one-to-many class="DocumentLine" />
+        </set>
+    </class>
+</hibernate-mapping>
