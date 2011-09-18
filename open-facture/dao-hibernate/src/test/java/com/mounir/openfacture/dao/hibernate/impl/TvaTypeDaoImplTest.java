@@ -29,16 +29,16 @@ public class TvaTypeDaoImplTest extends ABaseDaoTest<ITvaTypeDao>{
 	}
 	@Test
 	public void createTest() {
-		Session session = HibernateUtils.get().getSession() ;
-		Transaction tx = session.beginTransaction() ;
-		log.info("createTest");
-		TvaType entity = new TvaType() ;
-		entity.setCode("code test ") ; 	
-		entity.setPercentage(BigDecimal.TEN) ;
-		dao.create(entity);
-		log.info("saved entity ["+entity+"]") ;
-//		Assert.assertNotNull("Object not saved ...", entity.get) ;
-		tx.commit() ;
+//		Session session = HibernateUtils.get().getSession() ;
+//		Transaction tx = session.beginTransaction() ;
+//		log.info("createTest");
+//		TvaType entity = new TvaType() ;
+//		entity.setCode("code test ") ; 	
+//		entity.setPercentage(BigDecimal.TEN) ;
+//		dao.create(entity);
+//		log.info("saved entity ["+entity+"]") ;
+////		Assert.assertNotNull("Object not saved ...", entity.get) ;
+//		tx.commit() ;
 	}
 
 	@Test
