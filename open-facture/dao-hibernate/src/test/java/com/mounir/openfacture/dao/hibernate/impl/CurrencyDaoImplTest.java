@@ -1,6 +1,7 @@
 package com.mounir.openfacture.dao.hibernate.impl;
 
 import org.junit.Before;
+import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,5 +21,8 @@ public class CurrencyDaoImplTest extends ABaseDaoTest<ICurrencyDao>{
 	public void beforeMethode(){
 		super.dao = new CurrencyDaoImpl() ;
 	}
-
+	@Test
+	public void test(){
+		
+	}
 }
