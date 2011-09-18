@@ -1,6 +1,7 @@
 package com.mounir.openfacture.dao.hibernate.impl;
 
 import org.junit.Before;
+import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,5 +20,9 @@ public class DocumentLineDaoImplTest extends ABaseDaoTest<IDocumentLineDao>{
 	@Before
 	public void beforeMethode(){
 		super.dao = new DocumentLineDaoImpl() ;
+	}
+	@Test
+	public void test(){
+		
 	}
 }
