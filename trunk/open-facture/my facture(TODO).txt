@@ -1,0 +1,16 @@
+Nom technique  : my-facture
+Nom comm  : zinga
+
+technologie : 
+mysql
+jsf2 myjsf
+richfaces
+JPA2 (hibernate)
+Spring
+poweramc
+
+Module : 
+
+
+- create mysql db
+- 
