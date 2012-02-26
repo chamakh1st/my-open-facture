@@ -4,11 +4,11 @@
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<artifactId>open-facture</artifactId>
-		<groupId>com.mounir.openfacture</groupId>
+		<artifactId>my-facture</artifactId>
+		<groupId>com.mounir.my-facture</groupId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>com.mounir.openfacture</groupId>
+	<groupId>com.mounir.my-facture</groupId>
 	<artifactId>business</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Business</name>
@@ -18,12 +18,12 @@
 	</properties>
 	<dependencies>
 		<dependency>
-			<groupId>com.mounir.openfacture</groupId>
+			<groupId>com.mounir.my-facture</groupId>
 			<artifactId>entities</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>com.mounir.openfacture</groupId>
+			<groupId>com.mounir.my-facture</groupId>
 			<artifactId>dao-api</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
