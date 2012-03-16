@@ -6,10 +6,8 @@
 		<groupId>com.mounir.my-facture</groupId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>com.mounir.jsf</groupId>
 	<artifactId>web-sample</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>sample-jsf Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<build>
