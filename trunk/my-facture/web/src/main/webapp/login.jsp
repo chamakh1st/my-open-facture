@@ -8,9 +8,16 @@
 </head>
 <body>
 	<f:view>
-	<h:form>
-		<h:commandLink value="login page" action="login"></h:commandLink>
-	</h:form>
+		<h:form>
+			<h:messages globalOnly="true" />
+			<h:panelGrid columns="2"> 
+				<h:outputLabel value="login" />
+				<h:inputText id="login" value="login"></h:inputText>
+				<h:outputLabel value="password" />
+				<h:inputSecret id="password" value="password" />
+				<h:commandButton action="/pages/home" value="login"/>
+			</h:panelGrid>
+		</h:form>
 	</f:view>
 </body>
 </html>
