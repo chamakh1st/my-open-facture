@@ -6,6 +6,13 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:body>
-	<div id="header">header</div>
+	<f:view>
+		<ui:composition template="/template/template.xhtml">
+			<ui:define name="title">home</ui:define>
+			<ui:define name="content">
+				new content
+			</ui:define>
+		</ui:composition>
+	</f:view>
 </h:body>
 </html>
