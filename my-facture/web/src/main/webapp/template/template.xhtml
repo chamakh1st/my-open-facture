@@ -7,20 +7,21 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:head>
 	<h:outputStylesheet name="common-style.css" library="css" />
+	<title><ui:insert name="title">defaulttitle</ui:insert></title>
 </h:head>
 <h:body>
-	<div id="page">
-		<div id="header">
+	<div id="page" style="width: 100%">
+		<div id="header" style="background-color: red">
 			<ui:insert name="header">
 				<ui:include src="/template/header.xhtml" />
 			</ui:insert>
 		</div>
-		<div id="content">
+		<div id="content" style="height: 500px;">
 			<ui:insert name="content">
 				<ui:include src="/template/content.xhtml" />
 			</ui:insert>
 		</div>
-		<div id="footer">
+		<div id="footer" style="background-color: yellow">
 			<ui:insert name="footer">
 				<ui:include src="/template/footer.xhtml" />
 			</ui:insert>
