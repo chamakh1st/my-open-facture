@@ -9,11 +9,16 @@
 	<h:outputStylesheet name="common-style.css" library="css" />
 	<title><ui:insert name="title">defaulttitle</ui:insert></title>
 </h:head>
-<h:body>
+<h:body style="margin: 0px">
 	<div id="page" style="width: 100%">
-		<div id="header" style="background-color: red">
+		<div id="header" style="background-color: red; height: 50px;">
 			<ui:insert name="header">
 				<ui:include src="/template/header.xhtml" />
+			</ui:insert>
+		</div>
+		<div id="left-menu" style="height: 500px;background-color: yellow; width: 150px; float: left;">
+			<ui:insert name="left-menu">
+				<ui:include src="/template/left-menu.xhtml" />
 			</ui:insert>
 		</div>
 		<div id="content" style="height: 500px;">
@@ -21,7 +26,7 @@
 				<ui:include src="/template/content.xhtml" />
 			</ui:insert>
 		</div>
-		<div id="footer" style="background-color: yellow">
+		<div id="footer" style="background-color: blue">
 			<ui:insert name="footer">
 				<ui:include src="/template/footer.xhtml" />
 			</ui:insert>
