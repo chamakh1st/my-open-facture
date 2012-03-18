@@ -6,6 +6,29 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:body>
-	<div id="header">header</div>
+	<h:form>
+		<div id="header">
+			<ul style="list-style-position: inside; list-style-type: none;">
+				<li style="float: left;">
+					<h:commandLink action="listClient">Liste clients</h:commandLink>
+				</li>
+				<li style="float: left;">
+					<h:commandLink action="listContact">Liste contacts</h:commandLink>
+				</li>
+				<li style="float: left;">
+					<h:commandLink action="listArticle">Liste articles</h:commandLink>
+				</li>
+				<li style="float: left;">
+					<h:commandLink action="listDevis">Liste devis</h:commandLink>
+				</li>
+				<li style="float: left;">
+					<h:commandLink action="listFacture">Liste factures</h:commandLink>
+				</li>
+				<li style="float: left;">
+					<h:commandLink action="listPayment">Liste règlements</h:commandLink>
+				</li>
+			</ul>
+		</div>
+	</h:form>
 </h:body>
 </html>
