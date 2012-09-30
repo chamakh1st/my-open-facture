@@ -2,21 +2,21 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 3 juin 2011 00:40:58 by Hibernate Tools 3.4.0.CR1 -->
-<hibernate-mapping>
-    <class name="DocumentLine" table="document_line" catalog="facture">
+<hibernate-mapping package="com.mounir.openfacture.entities">
+    <class name="DocumentLine" table="document_line">
         <id name="id" type="long">
             <column name="ID" precision="15" scale="0" />
             <generator class="assigned" />
         </id>
-        <many-to-one name="document" class="Document" fetch="select">
-            <column name="FACTURE_ID" precision="15" scale="0" />
-        </many-to-one>
-        <many-to-one name="tvaType" class="TvaType" fetch="select">
-            <column name="TVA_ID" precision="15" scale="0" />
-        </many-to-one>
-        <many-to-one name="article" class="Article" fetch="select">
-            <column name="ARTICLE_ID" precision="15" scale="0" />
-        </many-to-one>
+<!--         <many-to-one name="document" class="Document" fetch="select"> -->
+<!--             <column name="FACTURE_ID" precision="15" scale="0" /> -->
+<!--         </many-to-one> -->
+<!--         <many-to-one name="tvaType" class="TvaType" fetch="select"> -->
+<!--             <column name="TVA_ID" precision="15" scale="0" /> -->
+<!--         </many-to-one> -->
+<!--         <many-to-one name="article" class="Article" fetch="select"> -->
+<!--             <column name="ARTICLE_ID" precision="15" scale="0" /> -->
+<!--         </many-to-one> -->
         <property name="lineNumber" type="java.lang.Long">
             <column name="LINE_NUMBER" precision="15" scale="0" />
         </property>

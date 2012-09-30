@@ -8,9 +8,9 @@
             <column name="ID" precision="15" scale="0" />
             <generator class="increment" /> 
         </id>
-        <many-to-one name="adress" class="Adress" fetch="select">
-            <column name="ADRESS_ID" precision="15" scale="0" />
-        </many-to-one>
+<!--         <many-to-one name="adress" class="Adress" fetch="select"> -->
+<!--             <column name="ADRESS_ID" precision="15" scale="0" /> -->
+<!--         </many-to-one> -->
         <property name="name" type="string">
             <column name="NAME" length="30" />
         </property>

@@ -14,11 +14,11 @@
         <property name="description" type="string">
             <column name="DESCRIPTION" length="30" />
         </property>
-        <set name="companies" table="company" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="LEGAL_FORM_ID" precision="15" scale="0" />
-            </key>
-            <one-to-many class="Company" />
-        </set>
+<!--         <set name="companies" table="company" inverse="true" lazy="true" fetch="select"> -->
+<!--             <key> -->
+<!--                 <column name="LEGAL_FORM_ID" precision="15" scale="0" /> -->
+<!--             </key> -->
+<!--             <one-to-many class="Company" /> -->
+<!--         </set> -->
     </class>
 </hibernate-mapping>

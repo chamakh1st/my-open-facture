@@ -14,11 +14,11 @@
         <property name="percentage" type="big_decimal">
             <column name="PERCENTAGE" precision="15" scale="3" />
         </property>
-        <set name="documentLines" table="document_line" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="TVA_ID" precision="15" scale="0" />
-            </key>
-            <one-to-many class="DocumentLine" />
-        </set>
+<!--         <set name="documentLines" table="document_line" inverse="true" lazy="true" fetch="select"> -->
+<!--             <key> -->
+<!--                 <column name="TVA_ID" precision="15" scale="0" /> -->
+<!--             </key> -->
+<!--             <one-to-many class="DocumentLine" /> -->
+<!--         </set> -->
     </class>
 </hibernate-mapping>
