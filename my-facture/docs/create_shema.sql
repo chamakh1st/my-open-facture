@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     03/06/2011 00:23:59                          */
+/* Created on:     30/09/2012 13:37:06                          */
 /*==============================================================*/
 
 
@@ -64,7 +64,7 @@ create table ARTICLE_TYPE
 (
    ID                   numeric(15) not null,
    CODE                 varchar(30),
-   DESCRIPTION          varchar(255),
+   LIBELLE              varchar(255),
    primary key (ID)
 );
 
@@ -116,7 +116,7 @@ create table COMPANY_TYPE
 (
    ID                   numeric(15) not null,
    CODE                 varchar(30),
-   DESCRIPTION          varchar(255),
+   LIBELLE              varchar(255),
    primary key (ID)
 );
 
@@ -138,7 +138,7 @@ create table CURRENCY
 (
    ID                   numeric(15) not null,
    CODE                 varchar(30),
-   DESCRIPTION          varchar(255),
+   LIBELLE              varchar(255),
    primary key (ID)
 );
 
@@ -183,7 +183,7 @@ create table DOCUMENT_TYPE
 (
    ID                   numeric(15) not null,
    CODE                 varchar(30),
-   DESCRIPTION          varchar(255),
+   LIBELLE              varchar(255),
    primary key (ID)
 );
 
@@ -194,7 +194,7 @@ create table LEGAL_FORM
 (
    ID                   numeric(15) not null,
    CODE                 varchar(30),
-   DESCRIPTION          varchar(255),
+   LIBELLE              varchar(255),
    primary key (ID)
 );
 
@@ -204,8 +204,8 @@ create table LEGAL_FORM
 create table TVA_TYPE
 (
    ID                   numeric(15) not null,
-   CODE                 varchar(30),
-   PERCENTAGE           numeric(15,3),
+   LIBELLE              varchar(30),
+   VALUE                numeric(6,2),
    primary key (ID)
 );
 
