@@ -8,9 +8,9 @@
             <column name="ID" precision="15" scale="0" />
             <generator class="increment" />
         </id>
-        <many-to-one name="country" class="Country" fetch="select">
-            <column name="COUNTRY_ID" precision="15" scale="0" />
-        </many-to-one>
+<!--         <many-to-one name="country" class="Country" fetch="select"> -->
+<!--             <column name="COUNTRY_ID" precision="15" scale="0" /> -->
+<!--         </many-to-one> -->
         <property name="adress1" type="string">
             <column name="ADRESS1" length="30" /> 
         </property>
@@ -23,17 +23,17 @@
         <property name="region" type="string">
             <column name="REGION" length="30" />
         </property>
-        <set name="companies" table="company" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="ADRESS_ID" precision="15" scale="0" />
-            </key>
-            <one-to-many class="Company" />
-        </set>
-        <set name="bankAccounts" table="bank_account" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="ADRESS_ID" precision="15" scale="0" />
-            </key>
-            <one-to-many class="BankAccount" />
-        </set>
+<!--         <set name="companies" table="company" inverse="true" lazy="true" fetch="select"> -->
+<!--             <key> -->
+<!--                 <column name="ADRESS_ID" precision="15" scale="0" /> -->
+<!--             </key> -->
+<!--             <one-to-many class="Company" /> -->
+<!--         </set> -->
+<!--         <set name="bankAccounts" table="bank_account" inverse="true" lazy="true" fetch="select"> -->
+<!--             <key> -->
+<!--                 <column name="ADRESS_ID" precision="15" scale="0" /> -->
+<!--             </key> -->
+<!--             <one-to-many class="BankAccount" /> -->
+<!--         </set> -->
     </class>
 </hibernate-mapping>

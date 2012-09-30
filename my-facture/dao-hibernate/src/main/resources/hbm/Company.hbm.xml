@@ -8,21 +8,21 @@
             <column name="ID" precision="15" scale="0" />
             <generator class="increment" />
         </id>
-        <many-to-one name="user" class="User" fetch="select">
-            <column name="USER_ID" precision="15" scale="0" />
-        </many-to-one>
-        <many-to-one name="company" class="Company" fetch="select">
-            <column name="ROOT_COMPANY_ID" precision="15" scale="0" />
-        </many-to-one>
-        <many-to-one name="companyType" class="CompanyType" fetch="select">
-            <column name="COMPANY_TYPE_ID" precision="15" scale="0" />
-        </many-to-one>
-        <many-to-one name="adress" class="Adress" fetch="select">
-            <column name="ADRESS_ID" precision="15" scale="0" />
-        </many-to-one>
-        <many-to-one name="legalForm" class="LegalForm" fetch="select">
-            <column name="LEGAL_FORM_ID" precision="15" scale="0" />
-        </many-to-one>
+<!--         <many-to-one name="user" class="User" fetch="select"> -->
+<!--             <column name="USER_ID" precision="15" scale="0" /> -->
+<!--         </many-to-one> -->
+<!--         <many-to-one name="company" class="Company" fetch="select"> -->
+<!--             <column name="ROOT_COMPANY_ID" precision="15" scale="0" /> -->
+<!--         </many-to-one> -->
+<!--         <many-to-one name="companyType" class="CompanyType" fetch="select"> -->
+<!--             <column name="COMPANY_TYPE_ID" precision="15" scale="0" /> -->
+<!--         </many-to-one> -->
+<!--         <many-to-one name="adress" class="Adress" fetch="select"> -->
+<!--             <column name="ADRESS_ID" precision="15" scale="0" /> -->
+<!--         </many-to-one> -->
+<!--         <many-to-one name="legalForm" class="LegalForm" fetch="select"> -->
+<!--             <column name="LEGAL_FORM_ID" precision="15" scale="0" /> -->
+<!--         </many-to-one> -->
         <property name="name" type="string">
             <column name="NAME" length="30" />
         </property>
@@ -53,23 +53,23 @@
         <property name="logo" type="binary">
             <column name="LOGO" />
         </property>
-        <set name="documents" table="document" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="COMPANY_ID" precision="15" scale="0" />
-            </key>
-            <one-to-many class="Document" />
-        </set>
-        <set name="companies" table="company" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="ROOT_COMPANY_ID" precision="15" scale="0" />
-            </key>
-            <one-to-many class="Company" />
-        </set>
-        <set name="companies_1" table="company" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="ROOT_COMPANY_ID" precision="15" scale="0" />
-            </key>
-            <one-to-many class="Company" />
-        </set>
+<!--         <set name="documents" table="document" inverse="true" lazy="true" fetch="select"> -->
+<!--             <key> -->
+<!--                 <column name="COMPANY_ID" precision="15" scale="0" /> -->
+<!--             </key> -->
+<!--             <one-to-many class="Document" /> -->
+<!--         </set> -->
+<!--         <set name="companies" table="company" inverse="true" lazy="true" fetch="select"> -->
+<!--             <key> -->
+<!--                 <column name="ROOT_COMPANY_ID" precision="15" scale="0" /> -->
+<!--             </key> -->
+<!--             <one-to-many class="Company" /> -->
+<!--         </set> -->
+<!--         <set name="companies_1" table="company" inverse="true" lazy="true" fetch="select"> -->
+<!--             <key> -->
+<!--                 <column name="ROOT_COMPANY_ID" precision="15" scale="0" /> -->
+<!--             </key> -->
+<!--             <one-to-many class="Company" /> -->
+<!--         </set> -->
     </class>
 </hibernate-mapping>

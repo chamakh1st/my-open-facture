@@ -29,11 +29,11 @@
         <property name="tel" type="string">
             <column name="TEL" length="30" />
         </property>
-        <set name="companies" table="company" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="USER_ID" precision="15" scale="0" />
-            </key>
-            <one-to-many class="Company" />
-        </set>
+<!--         <set name="companies" table="company" inverse="true" lazy="true" fetch="select"> -->
+<!--             <key> -->
+<!--                 <column name="USER_ID" precision="15" scale="0" /> -->
+<!--             </key> -->
+<!--             <one-to-many class="Company" /> -->
+<!--         </set> -->
     </class>
 </hibernate-mapping>

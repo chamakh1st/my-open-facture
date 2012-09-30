@@ -2,26 +2,26 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 3 juin 2011 00:40:58 by Hibernate Tools 3.4.0.CR1 -->
-<hibernate-mapping>
-    <class name="Document" table="document" catalog="facture">
+<hibernate-mapping package="com.mounir.openfacture.entities">
+    <class name="Document" table="document">
         <id name="id" type="long">
             <column name="ID" precision="15" scale="0" />
             <generator class="assigned" />
         </id>
-        <many-to-one name="documentType" class="DocumentType" fetch="select">
-            <column name="DOCUMENT_TYPE_ID" precision="15" scale="0" />
-        </many-to-one>
-        <many-to-one name="currency" class="Currency" fetch="select">
-            <column name="CURRENCY_ID" precision="15" scale="0" />
-        </many-to-one>
-        <many-to-one name="company" class="Company" fetch="select">
-            <column name="COMPANY_ID" precision="15" scale="0" />
-        </many-to-one>
-        <set name="documentLines" table="document_line" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="FACTURE_ID" precision="15" scale="0" />
-            </key>
-            <one-to-many class="DocumentLine" />
-        </set>
+<!--         <many-to-one name="documentType" class="DocumentType" fetch="select"> -->
+<!--             <column name="DOCUMENT_TYPE_ID" precision="15" scale="0" /> -->
+<!--         </many-to-one> -->
+<!--         <many-to-one name="currency" class="Currency" fetch="select"> -->
+<!--             <column name="CURRENCY_ID" precision="15" scale="0" /> -->
+<!--         </many-to-one> -->
+<!--         <many-to-one name="company" class="Company" fetch="select"> -->
+<!--             <column name="COMPANY_ID" precision="15" scale="0" /> -->
+<!--         </many-to-one> -->
+<!--         <set name="documentLines" table="document_line" inverse="true" lazy="true" fetch="select"> -->
+<!--             <key> -->
+<!--                 <column name="FACTURE_ID" precision="15" scale="0" /> -->
+<!--             </key> -->
+<!--             <one-to-many class="DocumentLine" /> -->
+<!--         </set> -->
     </class>
 </hibernate-mapping>
