@@ -8,9 +8,7 @@
 		<groupId>com.mounir.my-facture</groupId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>com.mounir.my-facture</groupId>
 	<artifactId>dao-hibernate</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>Dao Hibernate</name>
 	<url>http://maven.apache.org</url>
 	<properties>
@@ -62,7 +60,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>3.6.4.Final</version>
+			<version>4.1.7.Final</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
