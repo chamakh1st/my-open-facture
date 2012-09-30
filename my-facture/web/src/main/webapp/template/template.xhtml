@@ -6,27 +6,27 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:head>
-	<h:outputStylesheet name="common-style.css" library="css" />
+<!-- 	<h:outputStylesheet name="common-style.css" library="css" /> -->
 	<title><ui:insert name="title">defaulttitle</ui:insert></title>
 </h:head>
 <h:body style="margin: 0px">
 	<div id="page" style="width: 100%">
-		<div id="header" style="background-color: red; height: 50px;">
+		<div id="header" style="background-color: white; height: 50px; border-color: red; border-width: 1px; border-style: solid; ;">
 			<ui:insert name="header">
 				<ui:include src="/template/header.xhtml" />
 			</ui:insert>
 		</div>
-		<div id="left-menu" style="height: 500px;background-color: yellow; width: 150px; float: left;">
+		<div id="left-menu" style="height: 500px; width: 150px; float: left; border-color: red; border-width: 1px; border-style: solid;">
 			<ui:insert name="left-menu">
 				<ui:include src="/template/left-menu.xhtml" />
 			</ui:insert>
 		</div>
-		<div id="content" style="height: 500px;">
+		<div id="content" style="height: 500px; border-color: red; border-width: 1px; border-style: solid;">
 			<ui:insert name="content">
 				<ui:include src="/template/content.xhtml" />
 			</ui:insert>
 		</div>
-		<div id="footer" style="background-color: blue">
+		<div id="footer" style=" border-color: red; border-width: 1px; border-style: solid;">
 			<ui:insert name="footer">
 				<ui:include src="/template/footer.xhtml" />
 			</ui:insert>
