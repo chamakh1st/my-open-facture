@@ -31,22 +31,18 @@
 		<dependency>
 			<groupId>com.mounir.my-facture</groupId>
 			<artifactId>entities</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>com.mounir.my-facture</groupId>
 			<artifactId>dao-api</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>com.mounir.my-facture</groupId>
 			<artifactId>dao-hibernate</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>com.mounir.my-facture</groupId>
 			<artifactId>business</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<!-- FIN MY FACTURE DEPENDENCIES -->
 <!-- 		<dependency> -->
