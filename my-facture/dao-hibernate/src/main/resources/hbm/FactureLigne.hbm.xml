@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 7 d?c. 2012 11:59:19 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping package="com.mounir.myfacture.entities">
+    <class name="FactureLigne" table="facture_ligne" catalog="facture">
+        <id name="id" type="long">
+            <column name="ID" precision="15" scale="0" />
+            <generator class="assigned" />
+        </id>
+    </class>
+</hibernate-mapping>

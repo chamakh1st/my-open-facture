@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 15 mai 2011 17:25:37 by Hibernate Tools 3.4.0.CR1 -->
-<hibernate-mapping package="com.mounir.openfacture.entities">
-    <class name="User" table="user" >
+<!-- Generated 7 d?c. 2012 11:59:19 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping package="com.mounir.myfacture.entities">
+    <class name="User" table="user" catalog="facture">
         <id name="id" type="long">
             <column name="ID" precision="15" scale="0" />
-            <generator class="increment"/>
+            <generator class="assigned" />
         </id>
         <property name="login" type="string">
             <column name="LOGIN" length="30" />
@@ -29,11 +29,11 @@
         <property name="tel" type="string">
             <column name="TEL" length="30" />
         </property>
-<!--         <set name="companies" table="company" inverse="true" lazy="true" fetch="select"> -->
-<!--             <key> -->
-<!--                 <column name="USER_ID" precision="15" scale="0" /> -->
-<!--             </key> -->
-<!--             <one-to-many class="Company" /> -->
-<!--         </set> -->
+        <set name="companies" table="company" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="USER_ID" precision="15" scale="0" />
+            </key>
+            <one-to-many class="Company" />
+        </set>
     </class>
 </hibernate-mapping>

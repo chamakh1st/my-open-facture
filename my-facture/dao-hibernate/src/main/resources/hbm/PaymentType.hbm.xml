@@ -3,25 +3,16 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 7 d?c. 2012 11:59:19 by Hibernate Tools 4.0.0 -->
 <hibernate-mapping package="com.mounir.myfacture.entities">
-    <class name="TvaType" table="tva_type" catalog="facture">
+    <class name="PaymentType" table="payment_type" catalog="facture">
         <id name="id" type="long">
             <column name="ID" precision="15" scale="0" />
             <generator class="assigned" />
         </id>
         <property name="code" type="string">
-            <column name="CODE" length="5" />
+            <column name="CODE" length="25" />
         </property>
         <property name="description" type="string">
-            <column name="DESCRIPTION" length="25" />
+            <column name="DESCRIPTION" />
         </property>
-        <property name="value" type="big_decimal">
-            <column name="VALUE" precision="6" />
-        </property>
-        <set name="products" table="product" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="TVA_ID" precision="15" scale="0" />
-            </key>
-            <one-to-many class="Product" />
-        </set>
     </class>
 </hibernate-mapping>
