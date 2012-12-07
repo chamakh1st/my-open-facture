@@ -29,7 +29,7 @@ create table CIVILITE
 (
    ID                   numeric(15) not null,
    CODE                 varchar(5),
-   "LABEL"              varchar(25),
+   DESCRIPTION              varchar(25),
    primary key (ID)
 );
 
@@ -78,7 +78,7 @@ create table PAYMENT_TYPE
 (
    ID                   numeric(15) not null,
    CODE                 varchar(25),
-   "LABEL"              varchar(255),
+   DESCRIPTION              varchar(255),
    primary key (ID)
 );
 
@@ -103,7 +103,7 @@ create table TVA_TYPE
 (
    ID                   numeric(15) not null,
    CODE                 varchar(5),
-   "LABEL"              varchar(25),
+   DESCRIPTION              varchar(25),
    VALUE                numeric(6,2),
    primary key (ID)
 );
@@ -114,7 +114,7 @@ create table TVA_TYPE
 create table UNIT
 (
    ID                   numeric(15) not null,
-   "LABEL"              varchar(25),
+   DESCRIPTION              varchar(25),
    SYMBOLE              varchar(5),
    primary key (ID)
 );
