@@ -9,7 +9,12 @@ package com.mounir.openfacture.entities;
 public class BankAccount  implements java.io.Serializable {
 
 
-     private long id;
+     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1298732974017923350L;
+	
+	private long id;
      private Adress adress;
      private String name;
      private String bankCode;

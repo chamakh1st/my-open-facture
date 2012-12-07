@@ -11,7 +11,12 @@ import java.util.Set;
 public class DocumentType  implements java.io.Serializable {
 
 
-     private long id;
+     /**
+	 * 
+	 */
+	private static final long serialVersionUID = -5374082209249682322L;
+	
+	private long id;
      private String code;
      private String description;
      private Set<Document> documents = new HashSet<Document>(0);

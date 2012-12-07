@@ -12,7 +12,12 @@ import java.util.Set;
 public class TvaType  implements java.io.Serializable {
 
 
-     private long id;
+     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 8150879848603398361L;
+	
+	private long id;
      private String code;
      private BigDecimal percentage;
      private Set<DocumentLine> documentLines = new HashSet<DocumentLine>(0);
