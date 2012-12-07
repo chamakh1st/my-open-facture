@@ -86,18 +86,59 @@
 				<artifactId>junit</artifactId>
 				<version>4.8.1</version>
 			</dependency>
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>5.1.16</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>4.1.7.Final</version>
+			</dependency>
+			<!-- DEPENDENCE MODULE -->
+			<dependency>
+				<groupId>com.mounir.my-facture</groupId>
+				<artifactId>business</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.mounir.my-facture</groupId>
+				<artifactId>dao-api</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.mounir.my-facture</groupId>
+				<artifactId>dao-hibernate</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.mounir.my-facture</groupId>
+				<artifactId>entities</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.mounir.my-facture</groupId>
+				<artifactId>web</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.mounir.my-facture</groupId>
+				<artifactId>web-admin</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+<!-- 	<build> -->
+<!-- 		<plugins> -->
+<!-- 			<plugin> -->
+<!-- 				<groupId>org.apache.maven.plugins</groupId> -->
+<!-- 				<artifactId>maven-compiler-plugin</artifactId> -->
+<!-- 				<configuration> -->
+<!-- 					<source>1.6</source> -->
+<!-- 					<target>1.6</target> -->
+<!-- 				</configuration> -->
+<!-- 			</plugin> -->
+<!-- 		</plugins> -->
+<!-- 	</build> -->
 </project>
