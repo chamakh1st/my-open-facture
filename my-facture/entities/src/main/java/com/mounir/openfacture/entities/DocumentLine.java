@@ -9,7 +9,12 @@ package com.mounir.openfacture.entities;
 public class DocumentLine  implements java.io.Serializable {
 
 
-     private long id;
+     /**
+	 * 
+	 */
+	private static final long serialVersionUID = -8874082085309777671L;
+	
+	private long id;
      private Document document;
      private TvaType tvaType;
      private Article article;

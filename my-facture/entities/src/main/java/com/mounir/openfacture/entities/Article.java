@@ -11,7 +11,12 @@ import java.util.Set;
 public class Article  implements java.io.Serializable {
 
 
-     private long id;
+     /**
+	 * 
+	 */
+	private static final long serialVersionUID = -2309252299529884430L;
+	
+	private long id;
      private ArticleType articleType;
      private String name;
      private Set<DocumentLine> documentLines = new HashSet<DocumentLine>(0);

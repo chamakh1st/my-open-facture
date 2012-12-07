@@ -11,7 +11,12 @@ import java.util.Set;
 public class CompanyType  implements java.io.Serializable {
 
 
-     private long id;
+     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 2780731123549513898L;
+	
+	private long id;
      private String code;
      private String description;
      private Set<Company> companies = new HashSet<Company>(0);

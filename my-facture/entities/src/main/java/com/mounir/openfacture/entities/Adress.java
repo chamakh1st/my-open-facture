@@ -11,7 +11,12 @@ import java.util.Set;
 public class Adress  implements java.io.Serializable {
 
 
-     private long id;
+     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 6876709722500184058L;
+	
+	private long id;
      private Country country;
      private String adress1;
      private String adress2;

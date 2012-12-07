@@ -11,7 +11,12 @@ import java.util.Set;
 public class Country  implements java.io.Serializable {
 
 
-     private long id;
+     /**
+	 * 
+	 */
+	private static final long serialVersionUID = -1485170562567653038L;
+	
+	private long id;
      private String codeIso;
      private String name;
      private Set<Adress> adresses = new HashSet<Adress>(0);

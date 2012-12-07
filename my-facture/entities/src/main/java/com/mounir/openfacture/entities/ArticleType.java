@@ -11,7 +11,12 @@ import java.util.Set;
 public class ArticleType  implements java.io.Serializable {
 
 
-     private long id;
+     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 7481225377120684260L;
+	
+	private long id;
      private String code;
      private String description;
      private Set<Article> articles = new HashSet<Article>(0);

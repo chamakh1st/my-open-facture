@@ -11,7 +11,12 @@ import java.util.Set;
 public class Currency  implements java.io.Serializable {
 
 
-     private long id;
+     /**
+	 * 
+	 */
+	private static final long serialVersionUID = -4402165087169626730L;
+	
+	private long id;
      private String code;
      private String description;
      private Set<Document> documents = new HashSet<Document>(0);

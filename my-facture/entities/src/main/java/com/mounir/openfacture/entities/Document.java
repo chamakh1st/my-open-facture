@@ -11,7 +11,12 @@ import java.util.Set;
 public class Document  implements java.io.Serializable {
 
 
-     private long id;
+     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1152382195397734138L;
+	
+	private long id;
      private DocumentType documentType;
      private Currency currency;
      private Company company;

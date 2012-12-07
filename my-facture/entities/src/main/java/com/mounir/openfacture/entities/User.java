@@ -11,7 +11,12 @@ import java.util.Set;
 public class User  implements java.io.Serializable {
 
 
-     private long id;
+     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 2256626097851760997L;
+	
+	private long id;
      private String login;
      private String password;
      private String firstName;
