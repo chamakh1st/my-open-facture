@@ -7,9 +7,7 @@
     <groupId>com.mounir.my-facture</groupId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.mounir.my-facture</groupId>
   <artifactId>entities</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <name>Entities</name>
   <url>http://maven.apache.org</url>
   <properties>
