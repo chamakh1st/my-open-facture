@@ -11,28 +11,23 @@
 	<artifactId>web</artifactId>
 	<packaging>war</packaging>
 	<name>web Maven Webapp</name>
-	<url>http://maven.apache.org</url>
 	<dependencies>
 		<!-- DEBUT MY FACTURE DEPENDENCIES -->
 		<dependency>
 			<groupId>com.mounir.my-facture</groupId>
 			<artifactId>entities</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>com.mounir.my-facture</groupId>
 			<artifactId>dao-api</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>com.mounir.my-facture</groupId>
 			<artifactId>dao-hibernate</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>com.mounir.my-facture</groupId>
 			<artifactId>business</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<!-- FIN MY FACTURE DEPENDENCIES -->
 
@@ -97,7 +92,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	<build>
-		<finalName>web</finalName>
-	</build>
+<!-- 	<build> -->
+<!-- 		<finalName>web</finalName> -->
+<!-- 	</build> -->
 </project>
