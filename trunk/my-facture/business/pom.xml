@@ -8,9 +8,7 @@
 		<groupId>com.mounir.my-facture</groupId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>com.mounir.my-facture</groupId>
 	<artifactId>business</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>Business</name>
 	<url>http://maven.apache.org</url>
 	<properties>
@@ -20,12 +18,10 @@
 		<dependency>
 			<groupId>com.mounir.my-facture</groupId>
 			<artifactId>entities</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>com.mounir.my-facture</groupId>
 			<artifactId>dao-api</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
