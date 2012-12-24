@@ -6,16 +6,11 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:body>
-<!-- MENU -->
     <link type="text/css" href="#{request.contextPath}/css/menu.css" rel="stylesheet" />
     <script type="text/javascript" src="#{request.contextPath}/js/jquery.js"></script>
     <script type="text/javascript" src="#{request.contextPath}/js/menu.js"></script>
 <h:form>
 <style type="text/css">
-* { margin:0;
-    padding:0;
-}
-body { background:rgb(74,81,85); }
 div#menu { margin:5px auto; }
 div#copyright {
     font:11px 'Trebuchet MS';
@@ -46,7 +41,7 @@ div#copyright a:hover { color:#fff; }
 			                <li><a href="#{request.contextPath}/TODO.jsf"><span>Vos feuilles de temps</span></a></li>
 			            </ul>
 		            </li>
-	            </ul>
+				</ul>
 	        </li>
 	        <li><a href="#" class="parent"><span>Documents</span></a>
 	            <ul>
@@ -165,7 +160,7 @@ div#copyright a:hover { color:#fff; }
 		            </li>
 	            </ul>
 	        </li>
-	        <li class="last"><a href="#"><span>Configuration</span></a>
+	        <li class="last"><a href="#"><span>Configuratiosn</span></a>
 	       	 	<ul>
 		            <li><a href="#"><span>Votre entreprise</span></a>    
 		                <ul>
@@ -189,6 +184,7 @@ div#copyright a:hover { color:#fff; }
 		            </li>
 	            </ul>
 	        </li>
+			<li><a href="#{request.contextPath}/index.jsf"><span>Déconnexion</span></a></li>
 	    </ul>
 	</div>
 	<div id="copyright"><a href="http://apycom.com/"></a></div>
