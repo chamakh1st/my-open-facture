@@ -3,6 +3,10 @@
 /* Created on:     30/09/2012 13:37:06                          */
 /*==============================================================*/
 
+
+
+drop table if exists PARAMETER;
+
 drop table if exists TVA_TYPE;
 
 drop table if exists DOCUMENT_LINE;
