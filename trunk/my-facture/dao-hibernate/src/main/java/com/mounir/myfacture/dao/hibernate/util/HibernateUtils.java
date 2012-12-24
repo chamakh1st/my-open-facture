@@ -2,12 +2,9 @@ package com.mounir.myfacture.dao.hibernate.util;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import com.mounir.myfacture.entities.TvaType;
 
 /**
  * 
@@ -29,18 +26,6 @@ public class HibernateUtils {
 	}
 	public Session getSession(){
 		return sessionFactory.getCurrentSession() ;
-	}
-	
-	public static void main(String[] arg){
-		log.info("STARTTTTTT") ;
-		Session session = get().getSession() ;
-		Transaction tx = session.beginTransaction() ;
-		TvaType tvaType = new TvaType();
-		tvaType.setCode("code") ;
-		session.save(tvaType) ;
-		session.flush() ;
-		tx.commit();
-		log.info("ENDDDDDDDD") ;
 	}
 
 }
