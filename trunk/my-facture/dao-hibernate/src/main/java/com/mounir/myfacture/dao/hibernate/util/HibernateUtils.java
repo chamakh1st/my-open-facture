@@ -34,7 +34,7 @@ public class HibernateUtils {
 		}
 		return singleton ;
 	}
-	public Session getSession(){
+	public Session getCurrentSession(){
 		return sessionFactory.getCurrentSession() ;
 	}
 
