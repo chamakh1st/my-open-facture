@@ -23,31 +23,27 @@ public abstract class ABaseDao<T extends Serializable, PK extends Serializable>
 
 	public void create(T entity) {
 		log.info("create(T entity)");
-		getSession().beginTransaction() ;
-		getSession().save(entity)  ;
-		getSession().getTransaction().commit();
+		getCurrentSession().save(entity)  ;
 	}
 
 	public T get(PK id) {
 		log.info("T get(PK id)");
-		Session session = getSession();
-//		return null ;
-		return (T)session.get(getEntityClass(), id);
+		return (T)getCurrentSession().get(getEntityClass(), id);
 	}
 
 	public void update(T entity) {
 		log.info("update(T entity)");
-		getSession().update(entity) ;
+		getCurrentSession().update(entity) ;
 	}
 
 	public void delete(T entity) {
 		log.info("delete(T entity)");
-		getSession().delete(entity) ;
+		getCurrentSession().delete(entity) ;
 	}
 
 	public List<T> list() {
 		log.info("list()");
-		return getSession().createCriteria(getEntityClass()).list();
+		return getCurrentSession().createCriteria(getEntityClass()).list();
 	}
 	/**
 	 * 
@@ -61,7 +57,7 @@ public abstract class ABaseDao<T extends Serializable, PK extends Serializable>
 	 * 
 	 * @return
 	 */
-	protected Session getSession(){
-		return HibernateUtils.get().getSession() ;
+	protected Session getCurrentSession(){
+		return HibernateUtils.get().getCurrentSession() ;
 	}
 }
