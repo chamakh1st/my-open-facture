@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
+<head>
+    <link type="text/css" href="#{request.contextPath}/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+	<f:view>
+		<h:form>
+		<div style="width: 600px; height: 100%; margin-left: auto;margin-right: auto; margin-top: 100px">
+			<h:messages globalOnly="true" />
+			<h:panelGrid columns="2" style="text-align : center" width="100%"> 
+				<h:outputLabel for="firstName" value="firstName" />
+				<h:inputText id="firstName" value="#{userBean.firstName}" />
+				<h:outputLabel for="lastName" value="lastName" />
+				<h:inputText id="lastName" value="#{userBean.lastName}" />
+				<h:outputLabel for="login" value="login" />
+				<h:inputText id="login" value="#{userBean.login}" />
+				<h:outputLabel for="password" value="password" />
+				<h:inputSecret id="password" value="#{userBean.password}" />
+				<h:outputLabel for="passwordConfirm" value="passwordConfirm" />
+				<h:inputSecret id="passwordConfirm" value="#{userBean.passwordConfirm}" />
+				<h:outputLabel for="mail" value="mail" />
+				<h:inputText id="mail" value="#{userBean.mail}" />
+				<h:outputLabel for="birthDate" value="birthDate" />
+				<h:inputText id="birthDate" value="#{userBean.birthDate}" />
+				<h:outputLabel for="phone" value="phone" />
+				<h:inputText id="phone" value="#{userBean.phone}" />
+				<h:commandButton  action="#{userBean.create}" value="submit"/>
+				<h:commandButton  action="index" value="cancel"/>
+			</h:panelGrid>
+		</div>
+		</h:form>
+	</f:view>
+</body>
+</html>

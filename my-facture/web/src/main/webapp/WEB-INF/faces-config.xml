@@ -5,12 +5,31 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd"
     version="1.2">
+	<managed-bean>
+		<managed-bean-name>userBean</managed-bean-name>
+		<managed-bean-class>com.mounir.myfacture.web.UserBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope> 
+		<managed-property>
+			<property-name>userBusiness</property-name>
+			<value>#{userBusiness}</value>
+		</managed-property>
+	</managed-bean>
 
 	<navigation-rule>
 		<from-view-id>*</from-view-id>
 		<navigation-case>
 			<from-outcome>login</from-outcome>
 			<to-view-id>/login.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>index</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>createAccount</from-outcome>
+			<to-view-id>/createAccount.xhtml</to-view-id>
 			<redirect />
 		</navigation-case>
 	</navigation-rule>
@@ -28,6 +47,7 @@
 		</navigation-case>
 	</navigation-rule>
 	<!-- HEADER MENU -->
+	<!-- 
 	<navigation-rule>
 		<from-view-id>*</from-view-id>
 		<navigation-case>
@@ -76,7 +96,9 @@
 			<redirect/>
 		</navigation-case>
 	</navigation-rule>
+	-->
 	<!-- LEFT MENU-->
+	<!-- 
 	<navigation-rule>
 		<from-view-id>*</from-view-id>
 		<navigation-case>
@@ -133,4 +155,8 @@
 			<redirect/>
 		</navigation-case>
 	</navigation-rule>
+	 -->
+	 <application>
+		<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
+	 </application>
 </faces-config>
