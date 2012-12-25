@@ -20,8 +20,7 @@ public abstract class ABaseBusiness<E extends Serializable,PK extends Serializab
 	}
 	
 	public void create(E entity) {
-		// TODO Auto-generated method stub
-		
+		dao.create(entity) ;
 	}
 
 	public E get(PK id) {
