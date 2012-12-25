@@ -23,7 +23,9 @@ public abstract class ABaseDao<T extends Serializable, PK extends Serializable>
 
 	public void create(T entity) {
 		log.info("create(T entity)");
+		getSession().beginTransaction() ;
 		getSession().save(entity)  ;
+		getSession().getTransaction().commit();
 	}
 
 	public T get(PK id) {
