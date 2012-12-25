@@ -12,6 +12,14 @@
 		<servlet-name>Faces Servlet</servlet-name>
 		<url-pattern>*.jsf</url-pattern>
 	</servlet-mapping>
+	<filter>
+		<filter-name>OpenSessionInView</filter-name>
+		<filter-class>com.mounir.myfacture.web.filter.OpenSessionInView</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>OpenSessionInView</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
  <!-- Add Support for Spring -->
   <listener>
 	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
