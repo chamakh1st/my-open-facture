@@ -6,15 +6,18 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       >
-<head>
-	<title>JSP Page</title>
-    <link type="text/css" href="#{request.contextPath}/css/styles.css" rel="stylesheet" />
-</head>
-<body>
-	<f:view>
-	<h:form>
-		<h:commandLink value="login page" action="login"></h:commandLink>
-	</h:form>
-	</f:view>
-</body>
+	<head>
+		<title>JSP Page</title>
+	    <link type="text/css" href="#{request.contextPath}/css/styles.css" rel="stylesheet" />
+	</head>
+	<body>
+		<f:view>
+			<h:form>
+				<div style="width: 600px; height: 100%; margin-left: auto;margin-right: auto; margin-top: 100px; text-align: center;">
+					<h:commandLink value="login page" action="login" /> <br/>
+					<h:commandLink value="creation d'un compte" action="createAccount" />
+				</div>
+			</h:form>
+		</f:view>
+	</body>
 </html>

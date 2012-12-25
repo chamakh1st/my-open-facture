@@ -7,20 +7,22 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       >
 <head>
-	<title>JSP Page</title>
     <link type="text/css" href="#{request.contextPath}/css/styles.css" rel="stylesheet" />
 </head>
 <body>
 	<f:view>
 		<h:form>
-			<h:messages globalOnly="true" />
-			<h:panelGrid columns="2"> 
-				<h:outputLabel for="login" value="login" />
-				<h:inputText id="login" value="login"></h:inputText>
-				<h:outputLabel for="password" value="password" />
-				<h:inputSecret id="password" value="password" />
-				<h:commandButton action="success" value="login"/>
-			</h:panelGrid>
+			<div style="width: 600px; height: 100%; margin-left: auto;margin-right: auto; margin-top: 100px">
+				<h:messages globalOnly="true" />
+				<h:panelGrid columns="2"> 
+					<h:outputLabel for="login" value="login" />
+					<h:inputText id="login" value="#{userBean.login}" />
+					<h:outputLabel for="password" value="password" />
+					<h:inputSecret id="password" value="#{userBean.password}" />
+					<h:commandButton  action="#{userBean.login}" value="login"/>
+					<h:commandButton  action="index" value="cancel"/>
+				</h:panelGrid>
+			</div>
 		</h:form>
 	</f:view>
 </body>
