@@ -11,10 +11,14 @@ import com.mounir.myfacture.entities.User;
  * 
  */
 public class UserBusinessImpl extends ABaseBusiness<User, Long> implements
-		IUserBusiness{
-	
+    IUserBusiness {
+
 	public IUserDao getDao() {
 		return (IUserDao) dao;
+	}
+
+	public User login(String login, String password) {
+		return getDao().login(login, password);
 	}
 
 }

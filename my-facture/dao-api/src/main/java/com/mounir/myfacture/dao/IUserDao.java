@@ -6,8 +6,10 @@ import com.mounir.myfacture.entities.User;
 /**
  * 
  * @author Mounir
- *
+ * 
  */
 public interface IUserDao extends IBaseDao<User, Long> {
+
+	User login(String login, String password);
 
 }
