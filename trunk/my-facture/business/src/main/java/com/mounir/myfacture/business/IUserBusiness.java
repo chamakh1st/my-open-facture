@@ -10,4 +10,5 @@ import com.mounir.myfacture.entities.User;
  */
 public interface IUserBusiness extends IBaseBusiness<User, Long> {
 
+	public User login(String login, String password) ;
 }

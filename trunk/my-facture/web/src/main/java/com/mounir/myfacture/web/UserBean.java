@@ -1,9 +1,6 @@
 package com.mounir.myfacture.web;
 
-import java.util.Date;
-
 import com.mounir.myfacture.business.IUserBusiness;
-import com.mounir.myfacture.business.impl.UserBusinessImpl;
 import com.mounir.myfacture.entities.User;
 import com.mounir.myfacture.web.base.BaseBean;
 
@@ -26,7 +23,7 @@ public class UserBean extends BaseBean{
     private String mail;
     private String birthDate;
     private String phone;
-	
+    private boolean authenticated ;
 	public IUserBusiness getUserBusiness() {
 		return userBusiness;
 	}
@@ -117,11 +114,24 @@ public class UserBean extends BaseBean{
 	}
 
 
+	public boolean isAuthenticated() {
+		return authenticated;
+	}
+
+
+	public void setAuthenticated(boolean authenticated) {
+		this.authenticated = authenticated;
+	}
+
+
 	public String login(){
-		boolean test = true ;
-		if(test){
+		User user = userBusiness.login(login, password) ;
+		if(user!=null){
+			fillObject(user) ;
+			authenticated = true ;
 			return SUCCESS ;
 		}else{
+			authenticated = false ;
 			return FAILURE ;
 		}
 	}
@@ -129,7 +139,16 @@ public class UserBean extends BaseBean{
 	public String create(){
 		User user = new User(0, firstName, lastName, login, password, mail, null, phone) ;
 		userBusiness.create(user) ;
-		
 		return SUCCESS ;
+	}
+	
+	private void fillObject(User user){
+		setFirstName(user.getFirstName()) ;
+		setLastName(user.getLastName()) ;
+		setLogin(user.getLogin()) ;
+		setMail(user.getMail()) ;
+//		setBirthDate(user.getBirthDate()) ; TODO casting
+		setPhone(user.getPhone()) ;
+		
 	}
 }
