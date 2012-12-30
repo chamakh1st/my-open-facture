@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 30 d?c. 2012 20:40:25 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping package="com.mounir.myfacture.entities.params">
+    <class name="Company" table="company" catalog="facture">
+        <id name="id" type="long">
+            <column name="ID" precision="15" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="NAME" length="25" />
+        </property>
+        <property name="siren" type="string">
+            <column name="SIREN" length="25" />
+        </property>
+        <property name="siret" type="string">
+            <column name="SIRET" length="25" />
+        </property>
+        <property name="codeApe" type="string">
+            <column name="CODE_APE" length="25" />
+        </property>
+        <property name="capital" type="java.lang.Long">
+            <column name="CAPITAL" precision="15" scale="0" />
+        </property>
+        <property name="url" type="string">
+            <column name="URL" length="25" />
+        </property>
+        <property name="tel" type="string">
+            <column name="TEL" length="25" />
+        </property>
+        <property name="fax" type="string">
+            <column name="FAX" length="25" />
+        </property>
+        <property name="mail" type="string">
+            <column name="MAIL" length="25" />
+        </property>
+        <set name="users" table="user" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="COMPANY_ID" precision="15" scale="0" />
+            </key>
+            <one-to-many class="User" />
+        </set>
+    </class>
+</hibernate-mapping>
