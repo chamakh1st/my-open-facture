@@ -15,14 +15,14 @@
 
   <!-- MAPPING CLASS 
  		<mapping resource="hbm/Civilite.hbm.xml" /> 
- 		<mapping resource="hbm/Company.hbm.xml" /> 
  		<mapping resource="hbm/Facture.hbm.xml" /> 
  		<mapping resource="hbm/FactureLigne.hbm.xml" /> 
  		<mapping resource="hbm/PaymentType.hbm.xml" /> 
  		<mapping resource="hbm/Product.hbm.xml" /> 
  		<mapping resource="hbm/TvaType.hbm.xml" /> 
  		<mapping resource="hbm/Unit.hbm.xml" /> -->
-  <mapping resource="hbm/User.hbm.xml"/>
+  <mapping resource="hbm/Company.hbm.xml" /> 
   <mapping resource="hbm/Parameter.hbm.xml"/>
+  <mapping resource="hbm/User.hbm.xml"/>
  </session-factory>
 </hibernate-configuration>
