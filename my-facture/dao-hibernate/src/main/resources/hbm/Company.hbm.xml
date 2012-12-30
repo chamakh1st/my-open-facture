@@ -6,7 +6,7 @@
     <class name="Company" table="company">
         <id name="id" type="long">
             <column name="ID" precision="15" scale="0" />
-            <generator class="assigned" />
+            <generator class="increment" />
         </id>
         <property name="name" type="string">
             <column name="NAME" length="25" />
