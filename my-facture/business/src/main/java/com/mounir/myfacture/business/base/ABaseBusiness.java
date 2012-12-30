@@ -19,8 +19,8 @@ public abstract class ABaseBusiness<E extends Serializable,PK extends Serializab
 		this.dao = dao ;
 	}
 	
-	public void create(E entity) {
-		dao.create(entity) ;
+	public E create(E entity) {
+		return dao.create(entity) ;
 	}
 
 	public E get(PK id) {
@@ -28,9 +28,8 @@ public abstract class ABaseBusiness<E extends Serializable,PK extends Serializab
 		return null;
 	}
 
-	public void update(E entity) {
-		// TODO Auto-generated method stub
-		
+	public E update(E entity) {
+		return dao.update(entity) ;		
 	}
 
 	public void delete(PK id) {
