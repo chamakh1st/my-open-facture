@@ -21,9 +21,10 @@ public abstract class ABaseDao<T extends Serializable, PK extends Serializable>
 
 	private static Logger log = LoggerFactory.getLogger(ABaseDao.class);
 
-	public void create(T entity) {
+	public T create(T entity) {
 		log.info("create(T entity)");
 		getCurrentSession().save(entity)  ;
+		return entity ;
 	}
 
 	public T get(PK id) {
@@ -31,9 +32,10 @@ public abstract class ABaseDao<T extends Serializable, PK extends Serializable>
 		return (T)getCurrentSession().get(getEntityClass(), id);
 	}
 
-	public void update(T entity) {
+	public T update(T entity) {
 		log.info("update(T entity)");
 		getCurrentSession().update(entity) ;
+		return entity ;
 	}
 
 	public void delete(T entity) {

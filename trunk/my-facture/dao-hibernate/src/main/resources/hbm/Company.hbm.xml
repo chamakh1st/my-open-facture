@@ -2,8 +2,8 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <!-- Generated 30 d?c. 2012 20:40:25 by Hibernate Tools 4.0.0 -->
-<hibernate-mapping package="com.mounir.myfacture.entities.params">
-    <class name="Company" table="company" catalog="facture">
+<hibernate-mapping package="com.mounir.myfacture.entities">
+    <class name="Company" table="company">
         <id name="id" type="long">
             <column name="ID" precision="15" scale="0" />
             <generator class="assigned" />
