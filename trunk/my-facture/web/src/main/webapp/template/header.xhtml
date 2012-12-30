@@ -25,7 +25,7 @@ div#copyright a:hover { color:#fff; }
 	    <ul class="menu">
 	        <li><a href="#" class="parent"><span>Vous</span></a>
 	            <ul>
-	                <li><a href="#{request.contextPath}/TODO.xhtml"><span>Votre compte</span></a></li>
+	                <li><a href="#{request.contextPath}/TODO.xhtml"><span><u>Votre compte</u></span></a></li>
 	                <li><a href="#{request.contextPath}/TODO.xhtml"><span>Votre profil</span></a></li>
 		            <li><a href="#"><span>Activité</span></a>    
 		                <ul>
@@ -160,7 +160,7 @@ div#copyright a:hover { color:#fff; }
 		            </li>
 	            </ul>
 	        </li>
-	        <li class="last"><a href="#"><span>Configuratiosn</span></a>
+	        <li><a href="#"><span>Configuratiosn</span></a>
 	       	 	<ul>
 		            <li><a href="#"><span>Votre entreprise</span></a>    
 		                <ul>
@@ -184,7 +184,7 @@ div#copyright a:hover { color:#fff; }
 		            </li>
 	            </ul>
 	        </li>
-			<li><a href="#{request.contextPath}/index.xhtml"><span>Déconnexion</span></a></li>
+	        <li class="last"><h:commandLink action="#{userBean.logout}" ><span>Déconnexion</span></h:commandLink></li>
 	    </ul>
 		<span style="float: right;margin: 5px;">#{userBean.lastName}</span>
 		<span style="float: right;margin: 5px;">#{userBean.firstName}</span>

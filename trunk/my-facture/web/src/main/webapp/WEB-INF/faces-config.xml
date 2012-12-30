@@ -23,6 +23,11 @@
 			<redirect />
 		</navigation-case>
 		<navigation-case>
+			<from-outcome>logout</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+		<navigation-case>
 			<from-outcome>index</from-outcome>
 			<to-view-id>/index.xhtml</to-view-id>
 			<redirect />
@@ -49,5 +54,6 @@
 	<!-- HEADER MENU -->
 	 <application>
 		<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
+		<action-listener>com.mounir.myfacture.web.filter.AuthentificationActionLister</action-listener>
 	 </application>
 </faces-config>

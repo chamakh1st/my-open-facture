@@ -1,5 +1,8 @@
 package com.mounir.myfacture.web;
 
+import javax.faces.context.FacesContext;
+import javax.servlet.http.HttpSession;
+
 import com.mounir.myfacture.business.IUserBusiness;
 import com.mounir.myfacture.entities.User;
 import com.mounir.myfacture.web.base.BaseBean;
@@ -135,6 +138,12 @@ public class UserBean extends BaseBean{
 			return FAILURE ;
 		}
 	}
+		public String logout(){
+			((HttpSession) FacesContext.getCurrentInstance().getExternalContext().getSession(true)).invalidate() ;
+			return "logout" ;
+		
+	}
+	
 	
 	public String create(){
 		User user = new User(0, firstName, lastName, login, password, mail, null, phone) ;
