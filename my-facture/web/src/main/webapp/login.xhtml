@@ -13,7 +13,7 @@
 	<f:view>
 		<h:form>
 			<div style="width: 600px; height: 100%; margin-left: auto;margin-right: auto; margin-top: 100px">
-				<h:messages globalOnly="true" />
+				<h:messages for="login" showDetail="true" />
 				<h:panelGrid columns="2"> 
 					<h:outputLabel for="login" value="login" />
 					<h:inputText id="login" value="#{userBean.login}" />

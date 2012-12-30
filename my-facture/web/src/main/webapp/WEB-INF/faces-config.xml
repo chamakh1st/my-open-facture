@@ -13,6 +13,10 @@
 			<property-name>userBusiness</property-name>
 			<value>#{userBusiness}</value>
 		</managed-property>
+		<managed-property>
+			<property-name>companyBusiness</property-name>
+			<value>#{companyBusiness}</value>
+		</managed-property>
 	</managed-bean>
 
 	<navigation-rule>
@@ -36,6 +40,14 @@
 			<from-outcome>createAccount</from-outcome>
 			<to-view-id>/createAccount.xhtml</to-view-id>
 			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/createAccount.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+			<redirect/>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
