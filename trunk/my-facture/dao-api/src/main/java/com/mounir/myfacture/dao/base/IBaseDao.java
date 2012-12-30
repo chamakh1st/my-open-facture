@@ -10,9 +10,9 @@ import java.util.List;
  */
 public interface IBaseDao<T extends Serializable, PK extends Serializable> {
 
-	void create(T entity) ;
+	T create(T entity) ;
 	T get(PK id) ;
-	void update(T entity) ;
+	T update(T entity) ;
 	void delete(T entity) ;
 	List<T> list() ;
 }
