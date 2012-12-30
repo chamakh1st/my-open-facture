@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
+<ui:composition template="/template/template.xhtml">
+<ui:define name="content">
+	<f:view>
+		<h:form>
+		<div style="width: 600px; height: 100%; margin-left: auto;margin-right: auto; margin-top: 100px">
+			<h:messages globalOnly="true" />
+			<h:panelGrid columns="2" style="text-align : center" width="100%"> 
+				<h:outputLabel for="name" value="name" />
+				<h:inputText id="name" value="#{userBean.company.name}" />
+				<h:outputLabel for="siren" value="siren" />
+				<h:inputText id="siren" value="#{userBean.company.siren}" />
+				<h:outputLabel for="siret" value="siret" />
+				<h:inputText id="siret" value="#{userBean.company.siret}" />
+				<h:outputLabel for="codeApe" value="codeApe" />
+				<h:inputText id="codeApe" value="#{userBean.company.codeApe}" />
+				<h:outputLabel for="capital" value="capital" />
+				<h:inputText id="capital" value="#{userBean.company.capital}" />
+				<h:outputLabel for="url" value="url" />
+				<h:inputText id="url" value="#{userBean.company.url}" />
+				<h:outputLabel for="tel" value="tel" />
+				<h:inputText id="tel" value="#{userBean.company.tel}" />
+				<h:outputLabel for="fax" value="fax" />
+				<h:inputText id="fax" value="#{userBean.company.fax}" />
+				<h:outputLabel for="mail" value="mail" />
+				<h:inputText id="mail" value="#{userBean.company.mail}" />
+				<h:commandButton  action="#{userBean.saveCompany}" value="submit"/>
+				<h:commandButton  action="index" value="cancel"/>
+			</h:panelGrid>
+		</div>
+		</h:form>
+	</f:view>
+</ui:define>
+</ui:composition>
+</html>
