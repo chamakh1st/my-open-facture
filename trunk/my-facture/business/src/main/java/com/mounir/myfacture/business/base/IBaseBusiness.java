@@ -16,9 +16,9 @@ public interface IBaseBusiness<E extends Serializable, PK extends Serializable> 
 	IBaseDao<E, PK> getDao() ;
 	void setDao(IBaseDao<E, PK> dao) ;
 
-	void create(E entity) ;
+	E create(E entity) ;
 	E get(PK id) ;
-	void update(E entity) ;
+	E update(E entity) ;
 	void delete(PK id) ;
 	List<E> list() ;
 }
