@@ -4,10 +4,13 @@
 <!-- Generated 24 d?c. 2012 20:28:52 by Hibernate Tools 4.0.0 -->
 <hibernate-mapping package="com.mounir.myfacture.entities">
     <class name="User">
-        <id name="id" type="long" unsaved-value="0">
+        <id name="id" type="long">
             <column name="ID" precision="15" scale="0" />
             <generator class="increment" />
         </id>
+        <many-to-one name="company" class="Company" fetch="select">
+            <column name="COMPANY_ID" precision="15" scale="0" />
+        </many-to-one>
         <property name="firstName" type="string">
             <column name="FIRST_NAME" length="30" />
         </property>
