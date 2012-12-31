@@ -26,7 +26,6 @@ public class AuthentificationActionLister extends ActionListenerImpl{
 			System.out.println(" Sessiontimeout ") ;
 			context.getApplication().getNavigationHandler().handleNavigation(context, null, LOGIN_ACTION) ;
 			return ;
-//			facesContext.setViewRoot(root)
 		}
 		super.processAction(actionEvent) ;
 	}
