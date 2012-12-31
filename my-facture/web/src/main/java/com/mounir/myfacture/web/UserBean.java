@@ -165,9 +165,8 @@ public class UserBean extends BaseBean {
 	}
 
 	public String saveCompany() {
-		User user = new User(id, company, firstName, lastName, login, password, mail, null, phone);
-		userBusiness.update(user);
-		return SUCCESS;
+		companyBusiness.update(company);
+		return null;
 	}
 
 	private void fillObject(User user) {
