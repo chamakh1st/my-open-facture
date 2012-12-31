@@ -48,7 +48,7 @@ create table USER
    ID                   numeric(15) not null,
    FIRST_NAME           varchar(30),
    LAST_NAME            varchar(30),
-   LOGIN               user varchar(30),
+   LOGIN                varchar(30),
    PASSWORD             varchar(30),
    MAIL                 varchar(30),
    BIRTH_DATE           date,
