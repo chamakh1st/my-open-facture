@@ -21,13 +21,13 @@ public class AuthentificationActionLister extends ActionListenerImpl{
 		FacesContext context = FacesContext.getCurrentInstance() ;
 		UserBean userBean = (UserBean)context.getExternalContext().getSessionMap().get(USER_BEAN) ;
 		String viewId = context.getViewRoot().getViewId() ;
-//		if((userBean == null || !userBean.isAuthenticated()) 
-//				&& !LOGIN_PAGE.equals(viewId) && !INDEX_PAGE.equals(viewId)){
-//			System.out.println(" Sessiontimeout ") ;
-//			context.getApplication().getNavigationHandler().handleNavigation(context, null, LOGIN_ACTION) ;
-//			return ;
-////			facesContext.setViewRoot(root)
-//		}
+		if((userBean == null || !userBean.isAuthenticated()) 
+				&& !LOGIN_PAGE.equals(viewId) && !INDEX_PAGE.equals(viewId)){
+			System.out.println(" Sessiontimeout ") ;
+			context.getApplication().getNavigationHandler().handleNavigation(context, null, LOGIN_ACTION) ;
+			return ;
+//			facesContext.setViewRoot(root)
+		}
 		super.processAction(actionEvent) ;
 	}
 

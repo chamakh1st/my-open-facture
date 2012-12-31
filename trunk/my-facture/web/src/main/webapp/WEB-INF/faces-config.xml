@@ -37,6 +37,11 @@
 			<redirect />
 		</navigation-case>
 		<navigation-case>
+			<from-outcome>viewCompany</from-outcome>
+			<to-view-id>/pages/company/viewCompany.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+		<navigation-case>
 			<from-outcome>createAccount</from-outcome>
 			<to-view-id>/createAccount.xhtml</to-view-id>
 			<redirect />
