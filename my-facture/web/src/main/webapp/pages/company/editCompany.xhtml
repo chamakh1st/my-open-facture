@@ -11,7 +11,7 @@
 	<f:view>
 		<h:form>
 		<div style="width: 600px; height: 100%; margin-left: auto;margin-right: auto; margin-top: 100px">
-			<h:messages />
+			<h:messages globalOnly="true" />
 			<h:panelGrid columns="2" style="text-align : center" width="100%"> 
 				<h:outputLabel for="name" value="name" />
 				<h:inputText id="name" value="#{userBean.company.name}" />
