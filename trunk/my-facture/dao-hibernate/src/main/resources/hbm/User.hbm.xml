@@ -8,7 +8,7 @@
             <column name="ID" precision="15" scale="0" />
             <generator class="increment" />
         </id>
-        <many-to-one name="company" class="Company" fetch="select">
+        <many-to-one name="company" class="Company" fetch="join">
             <column name="COMPANY_ID" precision="15" scale="0" />
         </many-to-one>
         <property name="firstName" type="string">
