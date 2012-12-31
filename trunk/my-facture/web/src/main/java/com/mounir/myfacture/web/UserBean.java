@@ -144,9 +144,8 @@ public class UserBean extends BaseBean {
 			return SUCCESS;
 		} else {
 			authenticated = false;
-			FacesContext.getCurrentInstance().addMessage("login",
-			    new FacesMessage("wrong login/password"));
-			return FAILURE;
+			FacesContext.getCurrentInstance().addMessage(null , new FacesMessage("wrong login/password"));
+			return null;
 		}
 	}
 
