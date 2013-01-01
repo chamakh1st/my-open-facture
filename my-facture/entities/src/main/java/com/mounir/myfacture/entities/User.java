@@ -1,6 +1,6 @@
 package com.mounir.myfacture.entities;
 
-// Generated 30 d�c. 2012 20:40:33 by Hibernate Tools 4.0.0
+// Generated 1 janv. 2013 20:01:07 by Hibernate Tools 4.0.0
 
 import java.util.Date;
 
