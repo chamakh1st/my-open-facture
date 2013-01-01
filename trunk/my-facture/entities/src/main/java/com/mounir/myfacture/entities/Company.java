@@ -1,6 +1,6 @@
 package com.mounir.myfacture.entities;
 
-// Generated 30 d�c. 2012 20:40:33 by Hibernate Tools 4.0.0
+// Generated 1 janv. 2013 20:01:07 by Hibernate Tools 4.0.0
 
 import java.util.HashSet;
 import java.util.Set;
@@ -21,6 +21,7 @@ public class Company implements java.io.Serializable {
 	private String fax;
 	private String mail;
 	private Set<User> users = new HashSet<User>(0);
+	private Set<BankAccount> bankAccounts = new HashSet<BankAccount>(0);
 
 	public Company() {
 	}
@@ -31,7 +32,7 @@ public class Company implements java.io.Serializable {
 
 	public Company(long id, String name, String siren, String siret,
 	    String codeApe, Long capital, String url, String tel, String fax,
-	    String mail, Set<User> users) {
+	    String mail, Set<User> users, Set<BankAccount> bankAccounts) {
 		this.id = id;
 		this.name = name;
 		this.siren = siren;
@@ -43,6 +44,7 @@ public class Company implements java.io.Serializable {
 		this.fax = fax;
 		this.mail = mail;
 		this.users = users;
+		this.bankAccounts = bankAccounts;
 	}
 
 	public long getId() {
@@ -131,6 +133,14 @@ public class Company implements java.io.Serializable {
 
 	public void setUsers(Set<User> users) {
 		this.users = users;
+	}
+
+	public Set<BankAccount> getBankAccounts() {
+		return this.bankAccounts;
+	}
+
+	public void setBankAccounts(Set<BankAccount> bankAccounts) {
+		this.bankAccounts = bankAccounts;
 	}
 
 }
