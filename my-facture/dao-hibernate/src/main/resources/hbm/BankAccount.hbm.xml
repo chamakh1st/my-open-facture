@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 1 janv. 2013 20:01:13 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping package="com.mounir.myfacture.entities">
+    <class name="BankAccount">
+        <id name="id" type="long">
+            <column name="ID" precision="15" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="company" class="Company" fetch="select">
+            <column name="COMPANY_ID" precision="15" scale="0" />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="NAME" length="25" not-null="true" />
+        </property>
+        <property name="bankName" type="string">
+            <column name="BANK_NAME" length="25" />
+        </property>
+        <property name="bankCode" type="string">
+            <column name="BANK_CODE" length="25" />
+        </property>
+        <property name="bankWindow" type="string">
+            <column name="BANK_WINDOW" length="25" />
+        </property>
+        <property name="accountNumber" type="string">
+            <column name="ACCOUNT_NUMBER" length="25" />
+        </property>
+        <property name="accountKey" type="string">
+            <column name="ACCOUNT_KEY" length="2" />
+        </property>
+        <property name="agencyName" type="string">
+            <column name="AGENCY_NAME" length="25" />
+        </property>
+        <property name="adress" type="string">
+            <column name="ADRESS" length="25" />
+        </property>
+        <property name="zipcode" type="string">
+            <column name="ZIPCODE" length="25" />
+        </property>
+        <property name="city" type="string">
+            <column name="CITY" length="25" />
+        </property>
+        <property name="country" type="string">
+            <column name="COUNTRY" length="25" />
+        </property>
+        <property name="iban" type="string">
+            <column name="IBAN" length="25" />
+        </property>
+        <property name="bic" type="string">
+            <column name="BIC" length="25" />
+        </property>
+    </class>
+</hibernate-mapping>
