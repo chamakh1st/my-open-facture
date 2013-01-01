@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 30 d?c. 2012 20:40:25 by Hibernate Tools 4.0.0 -->
-<hibernate-mapping package="com.mounir.myfacture.entities">
-    <class name="Company" table="company">
+<!-- Generated 1 janv. 2013 20:01:13 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="Company" table="company" catalog="facture">
         <id name="id" type="long">
             <column name="ID" precision="15" scale="0" />
             <generator class="increment" />
@@ -40,6 +40,12 @@
                 <column name="COMPANY_ID" precision="15" scale="0" />
             </key>
             <one-to-many class="User" />
+        </set>
+        <set name="bankAccounts" table="bank_account" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="COMPANY_ID" precision="15" scale="0" />
+            </key>
+            <one-to-many class="BankAccount" />
         </set>
     </class>
 </hibernate-mapping>
