@@ -21,6 +21,7 @@
  		<mapping resource="hbm/Product.hbm.xml" /> 
  		<mapping resource="hbm/TvaType.hbm.xml" /> 
  		<mapping resource="hbm/Unit.hbm.xml" /> -->
+  <mapping resource="hbm/BankAccount.hbm.xml" /> 
   <mapping resource="hbm/Company.hbm.xml" /> 
   <mapping resource="hbm/Parameter.hbm.xml"/>
   <mapping resource="hbm/User.hbm.xml"/>
