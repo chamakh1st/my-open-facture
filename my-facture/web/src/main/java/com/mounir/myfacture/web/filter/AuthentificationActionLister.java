@@ -10,10 +10,11 @@ import com.mounir.myfacture.web.UserBean;
 
 public class AuthentificationActionLister extends ActionListenerImpl{
 	
-	private static final String LOGIN_PAGE = "/login.xhtml" ;
+//	private static final String LOGIN_PAGE = "/login.xhtml" ;
 	private static final String INDEX_PAGE = "/index.xhtml" ;
-	private static final String CREATE_ACCOUNT_PAGE = "/createAccount.xhtml" ;
+//	private static final String CREATE_ACCOUNT_PAGE = "/createAccount.xhtml" ;
 	private static final String LOGIN_ACTION = "login" ;
+	private static final String PUBLIC_URL_PREFIX = "/public/" ;
 	private static final String USER_BEAN = "userBean" ;
 	
 
@@ -22,9 +23,9 @@ public class AuthentificationActionLister extends ActionListenerImpl{
 		FacesContext context = FacesContext.getCurrentInstance() ;
 		UserBean userBean = (UserBean)context.getExternalContext().getSessionMap().get(USER_BEAN) ;
 		String viewId = context.getViewRoot().getViewId() ;
-		if((userBean == null || !userBean.isAuthenticated()) 
-				&& !LOGIN_PAGE.equals(viewId) && !INDEX_PAGE.equals(viewId) 
-				&& !CREATE_ACCOUNT_PAGE.equals(viewId)){
+		if(!viewId.equals(INDEX_PAGE) 
+				&& !viewId.startsWith(PUBLIC_URL_PREFIX) 
+				&& (userBean == null || !userBean.isAuthenticated())){
 			System.out.println(" Sessiontimeout ") ;
 			context.getApplication().getNavigationHandler().handleNavigation(context, null, LOGIN_ACTION) ;
 			return ;
