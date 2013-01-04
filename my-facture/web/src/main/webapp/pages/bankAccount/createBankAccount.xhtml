@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
+<ui:composition template="/template/template.xhtml">
+<ui:define name="content">
+	<f:view>
+		<h:form>
+		<div style="width: 600px; height: 100%; margin-left: auto;margin-right: auto; margin-top: 100px">
+			<h:messages />
+			<h:panelGrid columns="2" style="text-align : center" width="100%"> 
+				<h:outputLabel for="name" value="name" />
+				<h:inputText id="name" value="name" />
+				<h:outputLabel for="bankName" value="bankName" />
+				<h:inputText id="bankName" value="bankName" />
+				<h:outputLabel for="bankCode" value="bankCode" />
+				<h:inputText id="bankCode" value="bankCode" />
+				<h:outputLabel for="bankWindow" value="bankWindow" />
+				<h:inputText id="bankWindow" value="bankWindow" />
+				<h:outputLabel for="accountNumber" value="accountNumber" />
+				<h:inputText id="accountNumber" value="accountNumber" />
+				<h:outputLabel for="accountKey" value="accountKey" />
+				<h:inputText id="accountKey" value="accountKey" />
+				<h:outputLabel for="agencyName" value="agencyName" />
+				<h:inputText id="agencyName" value="agencyName" />
+				<h:outputLabel for="adress" value="adress" />
+				<h:inputText id="adress" value="adress" />
+				<h:outputLabel for="zipcode" value="zipcode" />
+				<h:inputText id="zipcode" value="zipcode" />
+				<h:outputLabel for="city" value="city" />
+				<h:inputText id="city" value="city" />
+				<h:outputLabel for="country" value="country" />
+				<h:inputText id="country" value="country" />
+				<h:outputLabel for="iban" value="iban" />
+				<h:inputText id="iban" value="iban" />
+				<h:outputLabel for="bic" value="bic" />
+				<h:inputText id="bic" value="bic" />
+				<h:commandButton  action="TODO" value="TODO"/>
+				<h:commandButton  action="TODO" value="cancel"/>
+			</h:panelGrid>
+		</div>
+		</h:form>
+	</f:view>
+</ui:define>
+</ui:composition>
+</html>
