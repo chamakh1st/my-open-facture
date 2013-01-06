@@ -18,6 +18,15 @@
 			<value>#{companyBusiness}</value>
 		</managed-property>
 	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>bankAccountBean</managed-bean-name>
+		<managed-bean-class>com.mounir.myfacture.web.BankAccountBean</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope> 
+		<managed-property>
+			<property-name>bankAccountBusiness</property-name>
+			<value>#{bankAccountBusiness}</value>
+		</managed-property>
+	</managed-bean>
 	<!-- MENU NAVIGATION RULES -->
 	<navigation-rule>
 		<from-view-id>*</from-view-id>

@@ -5,11 +5,15 @@
 	<!-- DAO -->
 	<bean name="userDao" class="com.mounir.myfacture.dao.hibernate.impl.UserDaoImpl" />
 	<bean name="companyDao" class="com.mounir.myfacture.dao.hibernate.impl.CompanyDaoImpl" />
+	<bean name="bankAccountDao" class="com.mounir.myfacture.dao.hibernate.impl.BankAccountDaoImpl" />
 	<!-- Business -->
 	<bean name="userBusiness" class="com.mounir.myfacture.business.impl.UserBusinessImpl">
 		<property name="dao" ref="userDao"/>
 	</bean>
 	<bean name="companyBusiness" class="com.mounir.myfacture.business.impl.CompanyBusinessImpl">
 		<property name="dao" ref="companyDao"/>
+	</bean>
+	<bean name="bankAccountBusiness" class="com.mounir.myfacture.business.impl.BankAccountBusinessImpl">
+		<property name="dao" ref="bankAccountDao"/>
 	</bean>
 </beans>
