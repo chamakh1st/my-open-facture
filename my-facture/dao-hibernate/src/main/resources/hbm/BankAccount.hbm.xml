@@ -3,10 +3,10 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <!-- Generated 1 janv. 2013 20:01:13 by Hibernate Tools 4.0.0 -->
 <hibernate-mapping package="com.mounir.myfacture.entities">
-    <class name="BankAccount">
+    <class name="BankAccount" table="BANK_ACCOUNT">
         <id name="id" type="long">
             <column name="ID" precision="15" scale="0" />
-            <generator class="assigned" />
+			<generator class="increment" />
         </id>
         <many-to-one name="company" class="Company" fetch="select">
             <column name="COMPANY_ID" precision="15" scale="0" />
