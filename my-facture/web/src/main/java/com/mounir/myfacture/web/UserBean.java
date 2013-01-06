@@ -16,6 +16,8 @@ import com.mounir.myfacture.web.base.BaseBean;
  * 
  */
 public class UserBean extends BaseBean {
+	
+	public static final String USER_BEAN = "userBean" ; 
 
 	// Business services
 	private IUserBusiness userBusiness;
@@ -177,7 +179,5 @@ public class UserBean extends BaseBean {
 		// setBirthDate(user.getBirthDate()) ; TODO casting
 		setPhone(user.getPhone());
 		setCompany(user.getCompany());
-		
-
 	}
 }
