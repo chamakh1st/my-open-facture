@@ -3,6 +3,8 @@ package com.mounir.myfacture.web.base;
 import javax.faces.application.Application;
 import javax.faces.context.FacesContext;
 
+import com.mounir.myfacture.web.UserBean;
+
 /**
  * 
  * @author mzaghab
@@ -29,4 +31,9 @@ public class BaseBean {
 	public Application getApplication(){
 		return getFacesContext().getApplication() ;
 	}
+	
+	public UserBean getUserBean(){
+		return (UserBean)getFacesContext().getExternalContext().getSessionMap().get(UserBean.USER_BEAN) ;
+	}
+	
 }
