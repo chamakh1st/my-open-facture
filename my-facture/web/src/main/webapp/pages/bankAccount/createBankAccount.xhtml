@@ -14,32 +14,32 @@
 			<h:messages />
 			<h:panelGrid columns="2" style="text-align : center" width="100%"> 
 				<h:outputLabel for="name" value="name" />
-				<h:inputText id="name" value="name" />
+				<h:inputText id="name" value="#{bankAccountBean.name}" />
 				<h:outputLabel for="bankName" value="bankName" />
-				<h:inputText id="bankName" value="bankName" />
+				<h:inputText id="bankName" value="#{bankAccountBean.bankName}" />
 				<h:outputLabel for="bankCode" value="bankCode" />
-				<h:inputText id="bankCode" value="bankCode" />
+				<h:inputText id="bankCode" value="#{bankAccountBean.bankCode}" />
 				<h:outputLabel for="bankWindow" value="bankWindow" />
-				<h:inputText id="bankWindow" value="bankWindow" />
+				<h:inputText id="bankWindow" value="#{bankAccountBean.bankWindow}" />
 				<h:outputLabel for="accountNumber" value="accountNumber" />
-				<h:inputText id="accountNumber" value="accountNumber" />
+				<h:inputText id="accountNumber" value="#{bankAccountBean.accountNumber}" />
 				<h:outputLabel for="accountKey" value="accountKey" />
-				<h:inputText id="accountKey" value="accountKey" />
+				<h:inputText id="accountKey" value="#{bankAccountBean.accountKey}" />
 				<h:outputLabel for="agencyName" value="agencyName" />
-				<h:inputText id="agencyName" value="agencyName" />
+				<h:inputText id="agencyName" value="#{bankAccountBean.agencyName}" />
 				<h:outputLabel for="adress" value="adress" />
-				<h:inputText id="adress" value="adress" />
+				<h:inputText id="adress" value="#{bankAccountBean.adress}" />
 				<h:outputLabel for="zipcode" value="zipcode" />
-				<h:inputText id="zipcode" value="zipcode" />
+				<h:inputText id="zipcode" value="#{bankAccountBean.zipcode}" />
 				<h:outputLabel for="city" value="city" />
-				<h:inputText id="city" value="city" />
+				<h:inputText id="city" value="#{bankAccountBean.city}" />
 				<h:outputLabel for="country" value="country" />
-				<h:inputText id="country" value="country" />
+				<h:inputText id="country" value="#{bankAccountBean.country}" />
 				<h:outputLabel for="iban" value="iban" />
-				<h:inputText id="iban" value="iban" />
+				<h:inputText id="iban" value="#{bankAccountBean.iban}" />
 				<h:outputLabel for="bic" value="bic" />
-				<h:inputText id="bic" value="bic" />
-				<h:commandButton  action="TODO" value="TODO"/>
+				<h:inputText id="bic" value="#{bankAccountBean.bic}" />
+				<h:commandButton  action="#{bankAccountBean.create}" value="submit"/>
 				<h:commandButton  action="TODO" value="cancel"/>
 			</h:panelGrid>
 		</div>
