@@ -1,5 +1,7 @@
 package com.mounir.myfacture.web;
 
+import java.util.List;
+
 import com.mounir.myfacture.business.IBankAccountBusiness;
 import com.mounir.myfacture.entities.BankAccount;
 import com.mounir.myfacture.web.base.BaseBean;
@@ -157,9 +159,8 @@ public class BankAccountBean extends BaseBean {
 		return SUCCESS;
 	}
 
-	public String saveCompany() {
-//		companyBusiness.update(company);
-		return null;
+	public List<BankAccount> getList() {
+		return bankAccountBusiness.list();
 	}
 
 }

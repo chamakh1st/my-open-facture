@@ -13,6 +13,28 @@
 		<div style="width: 600px; height: 100%; margin-left: auto;margin-right: auto; margin-top: 100px">
 			<h:messages />
 			bankaccount list
+			
+			<h:dataTable value="#{bankAccountBean.list}" var="bankAccount" border="1">
+				<h:column>
+					<f:facet name="header">
+						<h:column><h:outputText value="NAME" /></h:column>
+					</f:facet>
+					<h:outputText value="#{bankAccount.name}"></h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:column><h:outputText value="BANK_NAME" /></h:column>
+					</f:facet>
+					<h:outputText value="#{bankAccount.bankName}"></h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:column><h:outputText value="ACTION" /></h:column>
+					</f:facet>
+					<h:commandButton action="TODO" value="modifier"/>
+					<h:commandButton action="TODO" value="supprimer"/>
+				</h:column>
+			</h:dataTable>
 			<h:commandButton  action="createBankAccount" value="New Account"/>
 		</div>
 		</h:form>

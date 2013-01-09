@@ -88,6 +88,13 @@
 			<to-view-id>/pages/bankAccount/createBankAccount.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/pages/bankAccount/createBankAccount.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>succes</from-outcome>
+			<to-view-id>/pages/bankAccount/listBankAccount.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
 	<!-- HEADER MENU -->
 	 <application>
 		<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
