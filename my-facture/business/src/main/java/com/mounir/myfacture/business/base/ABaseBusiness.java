@@ -38,8 +38,7 @@ public abstract class ABaseBusiness<E extends Serializable,PK extends Serializab
 	}
 
 	public List<E> list() {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.list();
 	}
 
 }
