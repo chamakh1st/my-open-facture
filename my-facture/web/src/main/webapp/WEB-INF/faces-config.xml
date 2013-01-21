@@ -27,6 +27,16 @@
 			<value>#{bankAccountBusiness}</value>
 		</managed-property>
 	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>factureBean</managed-bean-name>
+		<managed-bean-class>com.mounir.myfacture.web.FactureBean</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope> 
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>encaissementBean</managed-bean-name>
+		<managed-bean-class>com.mounir.myfacture.web.EncaissementBean</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope> 
+	</managed-bean>
 	<!-- MENU NAVIGATION RULES -->
 	<navigation-rule>
 		<from-view-id>*</from-view-id>
@@ -53,10 +63,17 @@
 		<navigation-case>
 			<from-outcome>listBankAccount</from-outcome>
 			<to-view-id>/pages/bankAccount/listBankAccount.xhtml</to-view-id>
+			<redirect />
 		</navigation-case>
 		<navigation-case>
 			<from-outcome>listFacture</from-outcome>
 			<to-view-id>/pages/facture/listFacture.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>listEncaissement</from-outcome>
+			<to-view-id>/pages/encaissement/listEncaissement.xhtml</to-view-id>
+			<redirect />
 		</navigation-case>
 		<navigation-case>
 			<from-outcome>createAccount</from-outcome>
@@ -86,7 +103,7 @@
 <!-- 		</navigation-case> -->
 	</navigation-rule>
 	<navigation-rule>
-		<from-view-id>/pages/bankAccount/listBankAccount.xhtml</from-view-id>
+		<from-view-id>listBankAccount</from-view-id>
 		<navigation-case>
 			<from-outcome>createBankAccount</from-outcome>
 			<to-view-id>/pages/bankAccount/createBankAccount.xhtml</to-view-id>
@@ -100,10 +117,31 @@
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
+		<from-view-id>/pages/encaissement/listEncaissement.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>createEncaissement</from-outcome>
+			<to-view-id>/pages/encaissement/createEncaissement.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
 		<from-view-id>/pages/bankAccount/createBankAccount.xhtml</from-view-id>
 		<navigation-case>
-			<from-outcome>succes</from-outcome>
+			<from-outcome>success</from-outcome>
 			<to-view-id>/pages/bankAccount/listBankAccount.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/pages/facture/createFacture.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/pages/facture/listFacture.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id> /pages/encaissement/createEncaissement.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/pages/encaissement/listEncaissement.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<!-- HEADER MENU -->

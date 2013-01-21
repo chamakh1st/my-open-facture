@@ -12,13 +12,23 @@
 		<h:form>
 		<div style="width: 600px; height: 100%; margin-left: auto;margin-right: auto; margin-top: 100px">
 			<h:messages />
-			<h:outputText value="NEW FACTURE" />
-			<h:panelGrid columns="2" style="text-align : center" width="100%"> 
-				<h:outputLabel for="name" value="name" />
-				<h:inputText id="name" value="#{bankAccountBean.name}" />
-				<h:commandButton  action="#{factureBean.create}" value="submit"/>
-				<h:commandButton  action="succes" value="cancel"/>
-			</h:panelGrid>
+			encaissement list
+			<h:dataTable value="#{encaissementBean.list}" var="encaissement" border="1">
+				<h:column>
+					<f:facet name="header">
+						<h:column><h:outputText value="NAME" /></h:column>
+					</f:facet>
+					<h:outputText value="#{bankAccount.name}"></h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:column><h:outputText value="ACTION" /></h:column>
+					</f:facet>
+					<h:commandButton action="TODO" value="modifier"/>
+					<h:commandButton action="TODO" value="supprimer"/>
+				</h:column>
+			</h:dataTable>
+			<h:commandButton  action="createEncaissement" value="New Encaissement"/>
 		</div>
 		</h:form>
 	</f:view>
