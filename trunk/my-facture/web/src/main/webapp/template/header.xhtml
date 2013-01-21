@@ -68,9 +68,9 @@ div#copyright a:hover { color:#fff; }
 			                <li><a href="#{request.contextPath}/TODO.xhtml"><span>Bons de livraison</span></a></li>
 			            </ul>
 		            </li>
-					<li><a href="#"><span>Facturation clients</span></a>    
+					<li><a href="#"><u>Facturation clients</u></a>    
 		                <ul>
-			                <li><a href="#{request.contextPath}/TODO.xhtml"><span>Factures</span></a></li>
+			                <li><u><h:commandLink value="Factures" action="listFacture"/></u></li>
 			                <li><a href="#{request.contextPath}/TODO.xhtml"><span>Encaissements</span></a></li>
 			                <li><a href="#{request.contextPath}/TODO.xhtml"><span>Factures impayées</span></a></li>
 			            </ul>
@@ -164,7 +164,7 @@ div#copyright a:hover { color:#fff; }
 	       	 	<ul>
 		            <li><a href="#"><span><u>Votre entreprise</u></span></a>    
 		                <ul>
-			                <li><h:commandLink action="viewCompany"><span><u>Données de l'entreprise</u></span></h:commandLink></li>
+			                <li><u><h:commandLink action="viewCompany" value="Données de l'entreprise"></h:commandLink></u></li>
 			                <li><a href="#{request.contextPath}/TODO.xhtml"><span>Votre logo et couleurs</span></a></li>
 			                <li><h:commandLink action="listBankAccount"><span><u>Comptes bancaires</u></span></h:commandLink></li>
 			                <li><a href="#{request.contextPath}/TODO.xhtml"><span>Codes projet</span></a></li>
