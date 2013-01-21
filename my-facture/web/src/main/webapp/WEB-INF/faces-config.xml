@@ -55,6 +55,10 @@
 			<to-view-id>/pages/bankAccount/listBankAccount.xhtml</to-view-id>
 		</navigation-case>
 		<navigation-case>
+			<from-outcome>listFacture</from-outcome>
+			<to-view-id>/pages/facture/listFacture.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
 			<from-outcome>createAccount</from-outcome>
 			<to-view-id>/public/createAccount.xhtml</to-view-id>
 			<redirect />
@@ -86,6 +90,13 @@
 		<navigation-case>
 			<from-outcome>createBankAccount</from-outcome>
 			<to-view-id>/pages/bankAccount/createBankAccount.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>listFacture</from-view-id>
+		<navigation-case>
+			<from-outcome>createFacture</from-outcome>
+			<to-view-id>/pages/facture/createFacture.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>

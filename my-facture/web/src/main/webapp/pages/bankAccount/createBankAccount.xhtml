@@ -12,6 +12,7 @@
 		<h:form>
 		<div style="width: 600px; height: 100%; margin-left: auto;margin-right: auto; margin-top: 100px">
 			<h:messages />
+			<h:outputText value="NEW BANK ACCOUNT" />
 			<h:panelGrid columns="2" style="text-align : center" width="100%"> 
 				<h:outputLabel for="name" value="name" />
 				<h:inputText id="name" value="#{bankAccountBean.name}" />
@@ -40,7 +41,7 @@
 				<h:outputLabel for="bic" value="bic" />
 				<h:inputText id="bic" value="#{bankAccountBean.bic}" />
 				<h:commandButton  action="#{bankAccountBean.create}" value="submit"/>
-				<h:commandButton  action="sucess" value="reset"/>
+				<h:commandButton  action="succes" value="cancel"/>
 			</h:panelGrid>
 		</div>
 		</h:form>

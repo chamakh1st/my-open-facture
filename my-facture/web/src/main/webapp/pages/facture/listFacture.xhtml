@@ -1,18 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:ui="http://java.sun.com/jsf/facelets">
-<h:body>
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
+<ui:composition template="/template/template.xhtml">
+<ui:define name="content">
 	<f:view>
-		<ui:composition template="/template/template.xhtml">
-			<ui:define name="title">home</ui:define>
-			<ui:define name="content">
-				facture
-			</ui:define>
-		</ui:composition>
+		<h:form>
+		<div style="width: 600px; height: 100%; margin-left: auto;margin-right: auto; margin-top: 100px">
+			<h:messages />
+			Facture list
+			
+			<h:dataTable value="#{factureBean.list}" var="facture" border="1">
+				<h:column>
+					<f:facet name="header">
+						<h:column><h:outputText value="NUMERO" /></h:column>
+					</f:facet>
+					<h:outputText value="#{facture.name}"></h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:column><h:outputText value="MONTANT HT" /></h:column>
+					</f:facet>
+					<h:outputText value="#{facture.bankName}"></h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:column><h:outputText value="MONTANT TTC" /></h:column>
+					</f:facet>
+					<h:outputText value="#{facture.bankName}"></h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:column><h:outputText value="ACTION" /></h:column>
+					</f:facet>
+					<h:commandButton action="TODO" value="modifier"/>
+					<h:commandButton action="TODO" value="supprimer"/>
+				</h:column>
+			</h:dataTable>
+			<h:commandButton  action="createFacture" value="New Facture"/>
+		</div>
+		</h:form>
 	</f:view>
-</h:body>
+</ui:define>
+</ui:composition>
 </html>
