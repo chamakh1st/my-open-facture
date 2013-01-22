@@ -1,16 +1,7 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     01/01/2013 19:56:43                          */
+/* Created on:     22/01/2013 22:11:39                          */
 /*==============================================================*/
-
-
-drop table if exists BANK_ACCOUNT;
-
-drop table if exists COMPANY;
-
-drop table if exists PARAMETER;
-
-drop table if exists USER;
 
 /*==============================================================*/
 /* Table: BANK_ACCOUNT                                          */
@@ -54,6 +45,32 @@ create table COMPANY
 );
 
 /*==============================================================*/
+/* Table: ENCAISSEMENT                                          */
+/*==============================================================*/
+create table ENCAISSEMENT
+(
+   ID                   numeric(15) not null,
+   DT_ENCAISSEMENT      date,
+   MONTANT              numeric(15,3),
+   COMMENT              varchar(255),
+   BANK_ACCOUNT_ID      numeric(15),
+   primary key (ID)
+);
+
+/*==============================================================*/
+/* Table: FACTURE                                               */
+/*==============================================================*/
+create table FACTURE
+(
+   ID                   numeric(15) not null,
+   NUM_FACTURE          varchar(25),
+   DT_FACTURE           date,
+   COMPANY_ID           numeric(15),
+   CLIENT_ID            numeric(15),
+   primary key (ID)
+);
+
+/*==============================================================*/
 /* Table: PARAMETER                                             */
 /*==============================================================*/
 create table PARAMETER
@@ -83,6 +100,15 @@ create table USER
 );
 
 alter table BANK_ACCOUNT add constraint FK_REFERENCE_5 foreign key (COMPANY_ID)
+      references COMPANY (ID) on delete restrict on update restrict;
+
+alter table ENCAISSEMENT add constraint FK_REFERENCE_7 foreign key (BANK_ACCOUNT_ID)
+      references BANK_ACCOUNT (ID) on delete restrict on update restrict;
+
+alter table FACTURE add constraint FK_CLIENT foreign key (CLIENT_ID)
+      references COMPANY (ID) on delete restrict on update restrict;
+
+alter table FACTURE add constraint FK_COMPANY_OWNER foreign key (COMPANY_ID)
       references COMPANY (ID) on delete restrict on update restrict;
 
 alter table USER add constraint FK_USER_COMPANY foreign key (COMPANY_ID)
