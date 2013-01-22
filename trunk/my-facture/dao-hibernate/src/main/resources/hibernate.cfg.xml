@@ -23,6 +23,8 @@
  		<mapping resource="hbm/Unit.hbm.xml" /> -->
   <mapping resource="hbm/BankAccount.hbm.xml" /> 
   <mapping resource="hbm/Company.hbm.xml" /> 
+  <mapping resource="hbm/Encaissement.hbm.xml" /> 
+  <mapping resource="hbm/Facture.hbm.xml" /> 
   <mapping resource="hbm/Parameter.hbm.xml"/>
   <mapping resource="hbm/User.hbm.xml"/>
  </session-factory>
