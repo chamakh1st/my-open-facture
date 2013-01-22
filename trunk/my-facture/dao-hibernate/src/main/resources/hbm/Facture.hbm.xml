@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 22 janv. 2013 22:17:07 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping package="com.mounir.myfacture.entities">
+    <class name="Facture" table="facture">
+        <id name="id" type="long">
+            <column name="ID" precision="15" scale="0" />
+            <generator class="increment" />
+        </id>
+        <many-to-one name="companyByClientId" class="Company" fetch="select">
+            <column name="CLIENT_ID" precision="15" scale="0" />
+        </many-to-one>
+        <many-to-one name="companyByCompanyId" class="Company" fetch="select">
+            <column name="COMPANY_ID" precision="15" scale="0" />
+        </many-to-one>
+        <property name="numFacture" type="string">
+            <column name="NUM_FACTURE" length="25" />
+        </property>
+        <property name="dtFacture" type="date">
+            <column name="DT_FACTURE" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>
