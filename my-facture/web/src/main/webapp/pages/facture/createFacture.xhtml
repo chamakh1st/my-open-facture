@@ -14,8 +14,14 @@
 			<h:messages />
 			<h:outputText value="NEW FACTURE" />
 			<h:panelGrid columns="2" style="text-align : center" width="100%"> 
-				<h:outputLabel for="name" value="name" />
-				<h:inputText id="name" value="#{bankAccountBean.name}" />
+				<h:outputLabel for="numFacture" value="numFacture" />
+				<h:inputText id="numFacture" value="#{factureBean.numFacture}" />
+				<h:outputLabel for="dtFacture" value="dtFacture" />
+				<h:inputText id="dtFacture" value="#{factureBean.dtFacture}" >
+					<f:convertDateTime type="date" pattern="dd/mm/yyyy" />
+				</h:inputText>
+				<h:outputLabel for="clientCompany" value="clientCompany" />
+				<h:inputText id="clientCompany" value="#{factureBean.clientCompany}" />
 				<h:commandButton  action="#{factureBean.create}" value="submit"/>
 				<h:commandButton  action="succes" value="cancel"/>
 			</h:panelGrid>

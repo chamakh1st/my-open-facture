@@ -6,6 +6,8 @@
 	<bean name="userDao" class="com.mounir.myfacture.dao.hibernate.impl.UserDaoImpl" />
 	<bean name="companyDao" class="com.mounir.myfacture.dao.hibernate.impl.CompanyDaoImpl" />
 	<bean name="bankAccountDao" class="com.mounir.myfacture.dao.hibernate.impl.BankAccountDaoImpl" />
+	<bean name="factureDao" class="com.mounir.myfacture.dao.hibernate.impl.FactureDaoImpl" />
+	<bean name="encaissementDao" class="com.mounir.myfacture.dao.hibernate.impl.EncaissementDaoImpl" />
 	<!-- Business -->
 	<bean name="userBusiness" class="com.mounir.myfacture.business.impl.UserBusinessImpl">
 		<property name="dao" ref="userDao"/>
@@ -15,5 +17,11 @@
 	</bean>
 	<bean name="bankAccountBusiness" class="com.mounir.myfacture.business.impl.BankAccountBusinessImpl">
 		<property name="dao" ref="bankAccountDao"/>
+	</bean>
+	<bean name="factureBusiness" class="com.mounir.myfacture.business.impl.FactureBusinessImpl">
+		<property name="dao" ref="factureDao"/>
+	</bean>
+	<bean name="encaissementBusiness" class="com.mounir.myfacture.business.impl.EncaissementBusinessImpl">
+		<property name="dao" ref="encaissementDao"/>
 	</bean>
 </beans>

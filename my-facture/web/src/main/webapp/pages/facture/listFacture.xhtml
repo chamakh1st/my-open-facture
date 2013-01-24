@@ -19,19 +19,27 @@
 					<f:facet name="header">
 						<h:column><h:outputText value="NUMERO" /></h:column>
 					</f:facet>
-					<h:outputText value="#{facture.name}"></h:outputText>
+					<h:outputText value="#{facture.numFacture}"></h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:column><h:outputText value="DT FACTURE" /></h:column>
+					</f:facet>
+					<h:outputText value="#{facture.dtFacture}">
+						<f:convertDateTime type="date" pattern="dd/mm/yyyy" />
+					</h:outputText>
 				</h:column>
 				<h:column>
 					<f:facet name="header">
 						<h:column><h:outputText value="MONTANT HT" /></h:column>
 					</f:facet>
-					<h:outputText value="#{facture.bankName}"></h:outputText>
+					<h:outputText value="TODO"></h:outputText>
 				</h:column>
 				<h:column>
 					<f:facet name="header">
 						<h:column><h:outputText value="MONTANT TTC" /></h:column>
 					</f:facet>
-					<h:outputText value="#{facture.bankName}"></h:outputText>
+					<h:outputText value="TODO"></h:outputText>
 				</h:column>
 				<h:column>
 					<f:facet name="header">
