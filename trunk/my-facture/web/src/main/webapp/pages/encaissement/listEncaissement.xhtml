@@ -16,9 +16,29 @@
 			<h:dataTable value="#{encaissementBean.list}" var="encaissement" border="1">
 				<h:column>
 					<f:facet name="header">
-						<h:column><h:outputText value="NAME" /></h:column>
+						<h:column><h:outputText value="BANKACCOUNT" /></h:column>
 					</f:facet>
-					<h:outputText value="#{bankAccount.name}"></h:outputText>
+					<h:outputText value="#{encaissement.bankAccount}"></h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:column><h:outputText value="DTENCAISSEMENT" /></h:column>
+					</f:facet>
+					<h:outputText value="#{encaissement.dtEncaissement}">
+						<f:convertDateTime type="date" pattern="dd/mm/yyyy" />
+					</h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:column><h:outputText value="MONTANT" /></h:column>
+					</f:facet>
+					<h:outputText value="#{encaissement.montant}"></h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:column><h:outputText value="COMMENT" /></h:column>
+					</f:facet>
+					<h:outputText value="#{encaissement.comment}"></h:outputText>
 				</h:column>
 				<h:column>
 					<f:facet name="header">

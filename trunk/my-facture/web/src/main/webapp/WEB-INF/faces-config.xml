@@ -31,11 +31,19 @@
 		<managed-bean-name>factureBean</managed-bean-name>
 		<managed-bean-class>com.mounir.myfacture.web.FactureBean</managed-bean-class>
 		<managed-bean-scope>request</managed-bean-scope> 
+		<managed-property>
+			<property-name>factureBusiness</property-name>
+			<value>#{factureBusiness}</value>
+		</managed-property>
 	</managed-bean>
 	<managed-bean>
 		<managed-bean-name>encaissementBean</managed-bean-name>
 		<managed-bean-class>com.mounir.myfacture.web.EncaissementBean</managed-bean-class>
 		<managed-bean-scope>request</managed-bean-scope> 
+		<managed-property>
+			<property-name>encaissementBusiness</property-name>
+			<value>#{encaissementBusiness}</value>
+		</managed-property>
 	</managed-bean>
 	<!-- MENU NAVIGATION RULES -->
 	<navigation-rule>

@@ -14,8 +14,16 @@
 			<h:messages />
 			<h:outputText value="NEW ENCAISSEMENT" />
 			<h:panelGrid columns="2" style="text-align : center" width="100%"> 
-				<h:outputLabel for="name" value="name" />
-				<h:inputText id="name" value="#{encaissementBean.name}" />
+				<h:outputLabel for="bankAccount" value="bankAccount" />
+				<h:inputText id="bankAccount" value="#{encaissementBean.bankAccount}" />
+				<h:outputLabel for="dtEncaissement" value="dtEncaissement" />
+				<h:inputText id="dtEncaissement" value="#{encaissementBean.dtEncaissement}">
+					<f:convertDateTime type="date" pattern="dd/mm/yyyy" />
+				</h:inputText>
+				<h:outputLabel for="montant" value="montant" />
+				<h:inputText id="montant" value="#{encaissementBean.montant}" />
+				<h:outputLabel for="comment" value="comment" />
+				<h:inputText id="comment" value="#{encaissementBean.comment}" />
 				<h:commandButton  action="#{encaissementBean.create}" value="submit"/>
 				<h:commandButton  action="succes" value="cancel"/>
 			</h:panelGrid>

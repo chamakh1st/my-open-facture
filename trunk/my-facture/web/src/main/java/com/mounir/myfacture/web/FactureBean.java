@@ -1,8 +1,11 @@
 package com.mounir.myfacture.web;
 
+import java.util.Date;
 import java.util.List;
 
-import com.mounir.myfacture.entities.BankAccount;
+import com.mounir.myfacture.business.IFactureBusiness;
+import com.mounir.myfacture.entities.Company;
+import com.mounir.myfacture.entities.Facture;
 import com.mounir.myfacture.web.base.BaseBean;
 
 /**
@@ -13,11 +16,20 @@ import com.mounir.myfacture.web.base.BaseBean;
 public class FactureBean extends BaseBean {
 
 	// Business services
-//	private IBankAccountBusiness bankAccountBusiness;
+	private IFactureBusiness factureBusiness;
 
 	private long id;
+	private Company clientCompany;
+	private String numFacture;
+	private Date dtFacture;
 
-	private String name;
+	public IFactureBusiness getFactureBusiness() {
+		return factureBusiness;
+	}
+
+	public void setFactureBusiness(IFactureBusiness factureBusiness) {
+		this.factureBusiness = factureBusiness;
+	}
 
 	public long getId() {
 		return id;
@@ -26,23 +38,39 @@ public class FactureBean extends BaseBean {
 	public void setId(long id) {
 		this.id = id;
 	}
-
-	public String getName() {
-		return name;
+	
+	public Company getClientCompany() {
+		return clientCompany;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setClientCompany(Company clientCompany) {
+		this.clientCompany = clientCompany;
+	}
+
+	public String getNumFacture() {
+		return numFacture;
+	}
+
+	public void setNumFacture(String numFacture) {
+		this.numFacture = numFacture;
+	}
+
+	public Date getDtFacture() {
+		return dtFacture;
+	}
+
+	public void setDtFacture(Date dtFacture) {
+		this.dtFacture = dtFacture;
 	}
 
 	public String create() {
-//		BankAccount bankAccount = new BankAccount(0, getUserBean().getCompany(), name, bankName, bankCode, bankWindow, accountNumber, accountKey, agencyName, adress, zipcode, city, country, iban, bic) ;
-//		bankAccountBusiness.create(bankAccount);
+		Facture facture = new Facture(0, null,  getUserBean().getCompany(), numFacture, dtFacture) ;
+		factureBusiness.create(facture);
 		return SUCCESS;
 	}
 
-	public List<BankAccount> getList() {
-		return null ;//bankAccountBusiness.list();
+	public List<Facture> getList() {
+		return factureBusiness.list();
 	}
 
 }

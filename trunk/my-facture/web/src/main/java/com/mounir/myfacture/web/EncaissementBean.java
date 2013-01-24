@@ -1,8 +1,12 @@
 package com.mounir.myfacture.web;
 
+import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 
+import com.mounir.myfacture.business.IEncaissementBusiness;
 import com.mounir.myfacture.entities.BankAccount;
+import com.mounir.myfacture.entities.Encaissement;
 import com.mounir.myfacture.web.base.BaseBean;
 
 /**
@@ -13,11 +17,21 @@ import com.mounir.myfacture.web.base.BaseBean;
 public class EncaissementBean extends BaseBean {
 
 	// Business services
-//	private IBankAccountBusiness bankAccountBusiness;
+	private IEncaissementBusiness encaissementBusiness;
 
 	private long id;
+	private BankAccount bankAccount;
+	private Date dtEncaissement;
+	private BigDecimal montant;
+	private String comment;
 
-	private String name;
+	public IEncaissementBusiness getEncaissementBusiness() {
+		return encaissementBusiness;
+	}
+
+	public void setEncaissementBusiness(IEncaissementBusiness encaissementBusiness) {
+		this.encaissementBusiness = encaissementBusiness;
+	}
 
 	public long getId() {
 		return id;
@@ -27,22 +41,46 @@ public class EncaissementBean extends BaseBean {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public BankAccount getBankAccount() {
+		return bankAccount;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setBankAccount(BankAccount bankAccount) {
+		this.bankAccount = bankAccount;
+	}
+
+	public Date getDtEncaissement() {
+		return dtEncaissement;
+	}
+
+	public void setDtEncaissement(Date dtEncaissement) {
+		this.dtEncaissement = dtEncaissement;
+	}
+
+	public BigDecimal getMontant() {
+		return montant;
+	}
+
+	public void setMontant(BigDecimal montant) {
+		this.montant = montant;
+	}
+
+	public String getComment() {
+		return comment;
+	}
+
+	public void setComment(String comment) {
+		this.comment = comment;
 	}
 
 	public String create() {
-//		BankAccount bankAccount = new BankAccount(0, getUserBean().getCompany(), name, bankName, bankCode, bankWindow, accountNumber, accountKey, agencyName, adress, zipcode, city, country, iban, bic) ;
-//		bankAccountBusiness.create(bankAccount);
+		Encaissement encaissement = new Encaissement(id, bankAccount, dtEncaissement, montant, comment) ;
+		encaissementBusiness.create(encaissement);
 		return SUCCESS;
 	}
 
-	public List<BankAccount> getList() {
-		return null ;//bankAccountBusiness.list();
+	public List<Encaissement> getList() {
+		return encaissementBusiness.list();
 	}
 
 }
