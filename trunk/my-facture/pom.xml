@@ -11,6 +11,9 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+	<scm>
+		<connection>scm:svn:https://my-open-facture.googlecode.com/svn/trunk/my-facture</connection>
+	</scm>
 	<modules>
 		<module>entities</module>
 		<module>dao-api</module>
