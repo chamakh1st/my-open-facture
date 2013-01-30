@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 30 janv. 2013 22:14:17 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping package="com.mounir.myfacture.entities">
+    <class name="Product">
+        <id name="id" type="long">
+            <column name="ID" precision="15" scale="0" />
+            <generator class="increment" />
+        </id>
+        <many-to-one name="company" class="Company" fetch="select">
+            <column name="COMPANY_ID" precision="15" scale="0" />
+        </many-to-one>
+        <property name="code" type="string">
+            <column name="CODE" length="25" />
+        </property>
+        <property name="name" type="string">
+            <column name="NAME" length="25" />
+        </property>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" />
+        </property>
+        <property name="price" type="java.lang.Long">
+            <column name="PRICE" precision="15" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>
