@@ -88,6 +88,11 @@
 			<to-view-id>/public/createAccount.xhtml</to-view-id>
 			<redirect />
 		</navigation-case>
+		<navigation-case>
+			<from-outcome>listProduct</from-outcome>
+			<to-view-id>/pages/product/listProduct.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
 		<from-view-id>/public/createAccount.xhtml</from-view-id>
