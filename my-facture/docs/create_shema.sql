@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     22/01/2013 22:11:39                          */
+/* Created on:     30/01/2013 22:12:33                          */
 /*==============================================================*/
 
 /*==============================================================*/
@@ -83,6 +83,20 @@ create table PARAMETER
 );
 
 /*==============================================================*/
+/* Table: PRODUCT                                               */
+/*==============================================================*/
+create table PRODUCT
+(
+   ID                   numeric(15) not null,
+   CODE                 varchar(25),
+   NAME                 varchar(25),
+   DESCRIPTION          varchar(255),
+   PRICE                numeric(15),
+   COMPANY_ID           numeric(15),
+   primary key (ID)
+);
+
+/*==============================================================*/
 /* Table: USER                                                  */
 /*==============================================================*/
 create table USER
@@ -109,6 +123,9 @@ alter table FACTURE add constraint FK_CLIENT foreign key (CLIENT_ID)
       references COMPANY (ID) on delete restrict on update restrict;
 
 alter table FACTURE add constraint FK_COMPANY_OWNER foreign key (COMPANY_ID)
+      references COMPANY (ID) on delete restrict on update restrict;
+
+alter table PRODUCT add constraint FK_REFERENCE_6 foreign key (COMPANY_ID)
       references COMPANY (ID) on delete restrict on update restrict;
 
 alter table USER add constraint FK_USER_COMPANY foreign key (COMPANY_ID)
