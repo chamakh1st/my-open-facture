@@ -26,6 +26,7 @@
   <mapping resource="hbm/Encaissement.hbm.xml" /> 
   <mapping resource="hbm/Facture.hbm.xml" /> 
   <mapping resource="hbm/Parameter.hbm.xml"/>
+  <mapping resource="hbm/Product.hbm.xml"/>
   <mapping resource="hbm/User.hbm.xml"/>
  </session-factory>
 </hibernate-configuration>
