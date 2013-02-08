@@ -1,0 +1,1 @@
+mysql -D facture -u mounir -pmounir < drop_shema.sql
