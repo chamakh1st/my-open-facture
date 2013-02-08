@@ -12,13 +12,31 @@
 		<h:form>
 		<div style="width: 600px; height: 100%; margin-left: auto;margin-right: auto; margin-top: 100px">
 			<h:messages />
-			encaissement list
-			<h:dataTable value="#{encaissementBean.list}" var="encaissement" border="1">
+			product list
+			<h:dataTable value="#{productBean.list}" var="product" border="1">
+				<h:column>
+					<f:facet name="header">
+						<h:column><h:outputText value="CODE" /></h:column>
+					</f:facet>
+					<h:outputText value="#{product.code}"></h:outputText>
+				</h:column>
 				<h:column>
 					<f:facet name="header">
 						<h:column><h:outputText value="NAME" /></h:column>
 					</f:facet>
-					<h:outputText value="#{bankAccount.name}"></h:outputText>
+					<h:outputText value="#{product.name}"></h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:column><h:outputText value="DESCRIPTION" /></h:column>
+					</f:facet>
+					<h:outputText value="#{product.description}"></h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:column><h:outputText value="PRICE" /></h:column>
+					</f:facet>
+					<h:outputText value="#{product.price}"></h:outputText>
 				</h:column>
 				<h:column>
 					<f:facet name="header">
@@ -28,7 +46,7 @@
 					<h:commandButton action="TODO" value="supprimer"/>
 				</h:column>
 			</h:dataTable>
-			<h:commandButton  action="createEncaissement" value="New Encaissement"/>
+			<h:commandButton  action="createProduct" value="New product"/>
 		</div>
 		</h:form>
 	</f:view>
