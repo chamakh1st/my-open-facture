@@ -45,6 +45,15 @@
 			<value>#{encaissementBusiness}</value>
 		</managed-property>
 	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>productBean</managed-bean-name>
+		<managed-bean-class>com.mounir.myfacture.web.ProductBean</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope> 
+		<managed-property>
+			<property-name>productBusiness</property-name>
+			<value>#{productBusiness}</value>
+		</managed-property>
+	</managed-bean>
 	<!-- MENU NAVIGATION RULES -->
 	<navigation-rule>
 		<from-view-id>*</from-view-id>
@@ -151,10 +160,24 @@
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
-		<from-view-id> /pages/encaissement/createEncaissement.xhtml</from-view-id>
+		<from-view-id>/pages/encaissement/createEncaissement.xhtml</from-view-id>
 		<navigation-case>
 			<from-outcome>success</from-outcome>
 			<to-view-id>/pages/encaissement/listEncaissement.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/pages/product/listProduct.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>createProduct</from-outcome>
+			<to-view-id>/pages/product/createProduct.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/pages/product/createProduct.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/pages/product/listProduct.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<!-- HEADER MENU -->

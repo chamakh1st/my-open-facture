@@ -12,11 +12,18 @@
 		<h:form>
 		<div style="width: 600px; height: 100%; margin-left: auto;margin-right: auto; margin-top: 100px">
 			<h:messages />
-			<h:outputText value="NEW ENCAISSEMENT" />
+			<h:outputText value="NEW PRODUCT" />
 			<h:panelGrid columns="2" style="text-align : center" width="100%"> 
+				<h:outputLabel for="code" value="code" />
+				<h:inputText id="code" value="#{productBean.code}" />
 				<h:outputLabel for="name" value="name" />
-				<h:inputText id="name" value="#{encaissementBean.name}" />
-				<h:commandButton  action="#{encaissementBean.create}" value="submit"/>
+				<h:inputText id="name" value="#{productBean.name}" />
+				<h:outputLabel for="description" value="description" />
+				<h:inputText id="description" value="#{productBean.description}" />
+				<h:outputLabel for="price" value="price" />
+				<h:inputText id="price" value="#{productBean.price}" />
+
+				<h:commandButton  action="#{productBean.create}" value="submit"/>
 				<h:commandButton  action="succes" value="cancel"/>
 			</h:panelGrid>
 		</div>
